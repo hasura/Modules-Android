@@ -5,7 +5,6 @@ This module portrays different ways in which you can use Hasura Auth for SignUp 
 ## Configuring the Hasura Android SDK:
 
 Once you have created your android project, you will have to add [Hasura-Android SDK](https://github.com/hasura/android-sdk). 
-For doing this please refer the README at 
 
 ## OTP SignUp and Login:
 
