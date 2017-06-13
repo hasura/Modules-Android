@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SignUpHasura</string>
+    <string name="facebook_app_id">1335162989938542</string>
+    <string name="fb_login_protocol_scheme">fb1335162989938542</string>
+    <string name="google_auth_token">randomvalue</string>
+</resources>
