@@ -1,19 +1,18 @@
-#Hasura Android Module - Login
+# Hasura Android Module - Login
 
 This module portrays different ways in which you can use Hasura Auth for SignUp and Login.
 
-##Configuring the Hasura Android SDK:
+## 1. Configuring the Hasura Android SDK:
 
 Once you have created your android project, you will have to add [Hasura-Android SDK](https://github.com/hasura/android-sdk). 
-For doing this please refer the README at 
 
-##OTP SignUp and Login:
+## 2. OTP SignUp and Login:
 
 For using mobile OTP SignUp and Login, you will first have to enable mobile verification in the console and create an account on MSG91.
 Following is a link to a blogpost for setting up mobile verification and MSG91:
 https://medium.com/@amogh.karve/configuring-msg91-and-hasura-console-74184712e950
 
-###OTP SignUp:
+### 3. OTP SignUp:
 Step 1: 
   Create a new HasuraUser object(say "user") and initialize it.
   ```
@@ -41,11 +40,11 @@ Step2:
   
   ```
 Step3:
-  On success, it the OnSuccess() method, receive the otp.
+  If the request is successful, receive the otp in the onSuccess() method.
   Then call user.confirmMobile(otp,MobileConfirmationResponseListener) to confirm the otp.
   
   ```
-  user.confirmMobile(otp.getText().toString(), new MobileConfirmationResponseListener() {
+  user.confirmMobile("received otp", new MobileConfirmationResponseListener() {
                                     @Override
                                     public void onSuccess() {
                                         
@@ -59,19 +58,20 @@ Step3:
   
   ```
 Step4:
-  On success, you will receive the auth token and hasura-id in the response.
+  Once this is done, you can now login using this username and mobile.
   
-###OTP Login:
+### 4. OTP Login:
 Step 1:
   Create a new HasuraUser object(say "user") and initialize it.
 Step 2:
   When loginbutton is clicked, use
   user.setMobile(mobilenumber) to set the mobile number.
+  user.enableMobileOtpLogin() is essential to use OTP login.
 Step 3:
   Call user.enableMobileOtpLogin() to enable LogIn using OTP.
   
   ```
-  user.setMobile(mobile.getText().toString());
+  user.setMobile("mobile number");
   user.enableMobileOtpLogin();
   
   ```
@@ -98,7 +98,22 @@ Step 4:
     
 Step 5:
   If the above step is successful, you will receive the otp.
-  Receive this otp and call user.confirmMobile(otp,MobileConfirmationRequest) to confirm the otp.
+  Receive this otp and call user.otpLogin(otp,AuthResponseListener) to confirm the otp.
+  
+  ```
+  user.otpLogin("received otp", new AuthResponseListener() {
+                                    @Override
+                                    public void onSuccess(HasuraUser hasuraUser) {
+                                        
+                                    }
+
+                                    @Override
+                                    public void onFailure(HasuraException e) {
+                                    
+                                    }
+                                });
+  
+  ```
   
 Step 6:
   On success, you will receive the auth token and hasura-id in the response.
