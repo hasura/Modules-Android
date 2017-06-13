@@ -11,7 +11,7 @@ For doing this please refer the README at
 
 For using mobile OTP SignUp and Login, you will first have to enable mobile verification in the console and create an account on MSG91.
 Following is a link to a blogpost for setting up mobile verification and MSG91:
-// Blogpost for MSG91 link here.
+https://medium.com/@amogh.karve/configuring-msg91-and-hasura-console-74184712e950
 
 ###OTP SignUp:
 Step 1: 
