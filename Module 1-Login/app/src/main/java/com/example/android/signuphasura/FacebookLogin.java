@@ -2,7 +2,10 @@ package com.example.android.signuphasura;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
@@ -12,23 +15,24 @@ import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
-import io.hasura.sdk.auth.HasuraUser;
-import io.hasura.sdk.auth.responseListener.AuthResponseListener;
-import io.hasura.sdk.core.HasuraException;
+import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.responseListener.AuthResponseListener;
 
-import static io.hasura.sdk.auth.HasuraSocialLoginType.FACEBOOK;
+import static io.hasura.sdk.HasuraSocialLoginType.FACEBOOK;
 
 /**
  * Created by amogh on 12/6/17.
  */
 
-public class FacebookLogin extends AppCompatActivity {
+public class FacebookLogin extends Fragment {
 
     LoginButton loginButton;
     CallbackManager callbackmanager;
+    View parentViewHolder;
 
     @Override
-    protected void onActivityResult(int requestcode, int resultcode, Intent data){
+    public void onActivityResult(int requestcode, int resultcode, Intent data){
         super.onActivityResult(requestcode,resultcode,data);
         callbackmanager.onActivityResult(requestcode,resultcode,data);
     }
@@ -36,43 +40,57 @@ public class FacebookLogin extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.facebook_login);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        parentViewHolder = inflater.inflate(R.layout.facebook_login,container,false);
 
         final HasuraUser user = new HasuraUser();
 
         callbackmanager = CallbackManager.Factory.create();
-        loginButton = (LoginButton) findViewById(R.id.facebook_login_button);
+        loginButton = (LoginButton) parentViewHolder.findViewById(R.id.facebook_login_button);
 
         loginButton.setReadPermissions("email");
 
         LoginManager.getInstance().registerCallback(callbackmanager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
+
+                /*
+                    Once you've used Facebook to login, he will give you an access token.
+                    You should this access token to Hasura Auth to log you in.
+                    If the user is using Facebook login for the first time, Hasura Auth will
+                    create a new user for him and then log him in, else there will be a normal login.
+                 */
                 user.socialLogin(FACEBOOK, loginResult.getAccessToken().getToken(), new AuthResponseListener() {
                     @Override
                     public void onSuccess(HasuraUser hasuraUser) {
-                        Toast.makeText(FacebookLogin.this, "Login successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity().getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onFailure(HasuraException e) {
-                        Toast.makeText(FacebookLogin.this, e.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+
                     }
+
                 });
-                Toast.makeText(FacebookLogin.this, "Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onCancel() {
-                Toast.makeText(FacebookLogin.this, "Cancel", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), "Cancel", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onError(FacebookException error) {
-                Toast.makeText(FacebookLogin.this, error.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
             }
         });
+        return parentViewHolder;
     }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/nav_1" />
+
+    <item android:title="Register"
+        android:id="@+id/nav_2"/>
+
+    <item android:title="Mobile-SignUp"
+        android:id="@+id/nav_3"/>
+
+    <item android:title="Email-SignUp"
+        android:id="@+id/nav_4"/>
+
+    <item android:title="Login"
+        android:id="@+id/nav_5"/>
+
+    <item android:title="OTP-Login"
+        android:id="@+id/nav_6"/>
+
+    <item android:title="Facebook-Login"
+        android:id="@+id/nav_7"/>
+
+    <item android:title="Google-Login"
+        android:id="@+id/nav_8"/>
+</menu>

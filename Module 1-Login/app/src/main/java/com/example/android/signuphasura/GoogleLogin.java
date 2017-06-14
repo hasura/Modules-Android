@@ -3,8 +3,10 @@ package com.example.android.signuphasura;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -14,41 +16,49 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import io.hasura.sdk.auth.HasuraUser;
-import io.hasura.sdk.auth.responseListener.AuthResponseListener;
-import io.hasura.sdk.core.HasuraException;
+import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.responseListener.AuthResponseListener;
 
-import static io.hasura.sdk.auth.HasuraSocialLoginType.GOOGLE;
+import static io.hasura.sdk.HasuraSocialLoginType.GOOGLE;
 
 /**
  * Created by amogh on 12/6/17.
  */
 
-public class GoogleLogin extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+public class GoogleLogin extends Fragment implements GoogleApiClient.OnConnectionFailedListener {
 
     SignInButton signInButton;
     GoogleApiClient googleApiClient;
-    String server_client_id;
+    View parentViewHolder;
 
     private final static int CODE = 05;
     HasuraUser user;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.google_login);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        parentViewHolder = inflater.inflate(R.layout.google_login,container,false);
 
         user = new HasuraUser();
 
-        signInButton = (SignInButton) findViewById(R.id.google_login_button);
+        signInButton = (SignInButton) parentViewHolder.findViewById(R.id.google_login_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
 
+        /*
+            You ask Google to send you an IdToken that will be sent to Hasura Auth to verify.
+         */
+
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestIdToken(getString(R.string.default_web_client_id))  //request IdToken
                 .build();
 
-        googleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this, this)
+        googleApiClient = new GoogleApiClient.Builder(getActivity().getApplicationContext())
+                .enableAutoManage(getActivity(), this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, googleSignInOptions)
                 .build();
 
@@ -59,10 +69,11 @@ public class GoogleLogin extends AppCompatActivity implements GoogleApiClient.On
                 startActivityForResult(signInIntent,CODE);
             }
         });
+        return parentViewHolder;
     }
 
     @Override
-    protected void onActivityResult(int requestcode,int resultcode,Intent data){
+    public void onActivityResult(int requestcode,int resultcode,Intent data){
         super.onActivityResult(requestcode,resultcode,data);
         if(requestcode == CODE){
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
@@ -72,20 +83,25 @@ public class GoogleLogin extends AppCompatActivity implements GoogleApiClient.On
 
     private void handleSignInResult(GoogleSignInResult result){
         if(result.isSuccess()){
-            //Toast.makeText(this, "Google Success", Toast.LENGTH_SHORT).show();
+
+            /*
+                Retrieve the IdToken and send it to HasuraAuth in the socialLogin request.
+             */
+
             user.socialLogin(GOOGLE, result.getSignInAccount().getIdToken(), new AuthResponseListener() {
                 @Override
                 public void onSuccess(HasuraUser hasuraUser) {
-                    Toast.makeText(GoogleLogin.this, "Success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity().getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onFailure(HasuraException e) {
-                    Toast.makeText(GoogleLogin.this, e.toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+
                 }
             });
         }else{
-            Toast.makeText(this, "Google Failure", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Google Failure", Toast.LENGTH_SHORT).show();
         }
     }
 

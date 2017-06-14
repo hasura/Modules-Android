@@ -11,23 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AuthenticationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".EmailSignup"/>
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".Register"/>
         <activity android:name=".SignUpChoice"/>
-        <activity android:name=".MobileSignup"/>
-        <activity android:name=".SocialAuthSignup"/>
-        <activity android:name=".FacebookLogin"/>
-        <activity android:name=".GoogleLogin"/>
+        <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity android:name=".SampleActivity"/>
-        <activity android:name=".OtpLogin"/>
-        <activity android:name=".RegularLogin"/>
 
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>

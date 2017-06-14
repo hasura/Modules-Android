@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SignUpHasura.iml" filepath="$PROJECT_DIR$/SignUpHasura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module 1-Login.iml" filepath="$PROJECT_DIR$/Module 1-Login.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

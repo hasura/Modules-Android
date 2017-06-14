@@ -3,44 +3,64 @@ package com.example.android.signuphasura;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import io.hasura.sdk.auth.HasuraUser;
-import io.hasura.sdk.auth.responseListener.AuthResponseListener;
-import io.hasura.sdk.auth.responseListener.OtpStatusListener;
-import io.hasura.sdk.core.HasuraException;
+import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.responseListener.AuthResponseListener;
+import io.hasura.sdk.responseListener.OtpStatusListener;
 
 /**
  * Created by amogh on 13/6/17.
  */
 
-public class OtpLogin extends AppCompatActivity {
+public class OtpLogin extends Fragment {
 
     EditText mobile;
     Button button;
+    View parentViewHolder;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mobile_login_activity);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        parentViewHolder = inflater.inflate(R.layout.mobile_login_activity,container,false);
 
         final HasuraUser user = new HasuraUser();
 
-        mobile = (EditText) findViewById(R.id.otp_mobile);
-        button = (Button) findViewById(R.id.otp_button);
+        mobile = (EditText) parentViewHolder.findViewById(R.id.otp_mobile);
+        button = (Button) parentViewHolder.findViewById(R.id.otp_button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
                 user.setMobile(mobile.getText().toString());
 
+                /*
+                    To use OTP login, you must first enable OTP login.
+                 */
                 user.enableMobileOtpLogin();
 
+                /*
+                    To login using OTP, you ask HasuraAuth to send an OTP to your mobile.
+                 */
+
+                /*
+                    Currently there is some issue with the sendOtpToMobile API, the otp gets sent,
+                    but the response is a 401.This will be fixed soon.
+
+                    So for the time being, to use OTP Login,write your code in the onFailure() method of sendOtpToMobile()
+                 */
                 user.sendOtpToMobile(new OtpStatusListener() {
                     @Override
                     public void onSuccess() {
@@ -53,12 +73,15 @@ public class OtpLogin extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
 
+                                /*
+                                    Once you get the OTP, you have to enter that OTP and call otpLogin() to login.
+                                 */
                                 user.otpLogin(otp.getText().toString(), new AuthResponseListener() {
                                     @Override
                                     public void onSuccess(HasuraUser hasuraUser) {
                                         Intent i = new Intent(v.getContext(),SampleActivity.class);
                                         startActivity(i);
-                                        finish();
+                                        getActivity().finish();
                                     }
 
                                     @Override
@@ -86,7 +109,7 @@ public class OtpLogin extends AppCompatActivity {
                                     public void onSuccess(HasuraUser hasuraUser) {
                                         Intent i = new Intent(v.getContext(),SampleActivity.class);
                                         startActivity(i);
-                                        finish();
+                                        getActivity().finish();
                                     }
 
                                     @Override
@@ -96,10 +119,11 @@ public class OtpLogin extends AppCompatActivity {
                                 });
                             }
                         });
-                        alert.show();
                     }
+
                 });
             }
         });
+        return parentViewHolder;
     }
 }

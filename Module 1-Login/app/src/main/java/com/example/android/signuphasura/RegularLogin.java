@@ -2,34 +2,40 @@ package com.example.android.signuphasura;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import io.hasura.sdk.auth.HasuraUser;
-import io.hasura.sdk.auth.responseListener.AuthResponseListener;
-import io.hasura.sdk.core.HasuraException;
+import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.responseListener.AuthResponseListener;
 
 /**
  * Created by amogh on 13/6/17.
  */
 
-public class RegularLogin extends AppCompatActivity {
+public class RegularLogin extends Fragment {
 
     EditText username;
     EditText password;
     Button button;
+    View parentViewHolder;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_regular);
+    }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        parentViewHolder = inflater.inflate(R.layout.login_regular,container,false);
 
-        username = (EditText) findViewById(R.id.login_username);
-        password = (EditText) findViewById(R.id.login_password);
-        button = (Button) findViewById(R.id.regular_login_button);
+        username = (EditText) parentViewHolder.findViewById(R.id.login_username);
+        password = (EditText) parentViewHolder.findViewById(R.id.login_password);
+        button = (Button) parentViewHolder.findViewById(R.id.regular_login_button);
 
         final HasuraUser user = new HasuraUser();
 
@@ -42,18 +48,21 @@ public class RegularLogin extends AppCompatActivity {
                 user.login(new AuthResponseListener() {
                     @Override
                     public void onSuccess(HasuraUser hasuraUser) {
-                        Intent i = new Intent(v.getContext(),SampleActivity.class);
+                        Intent i = new Intent(getActivity().getApplicationContext(),SampleActivity.class);
                         startActivity(i);
-                        finish();
-                        Toast.makeText(RegularLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        getActivity().finish();
+                        Toast.makeText(getActivity().getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onFailure(HasuraException e) {
-                        Toast.makeText(RegularLogin.this, e.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+
                     }
+
                 });
             }
         });
+        return parentViewHolder;
     }
 }

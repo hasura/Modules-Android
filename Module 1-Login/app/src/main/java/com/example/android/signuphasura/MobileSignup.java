@@ -3,38 +3,45 @@ package com.example.android.signuphasura;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import io.hasura.sdk.auth.HasuraUser;
-import io.hasura.sdk.auth.responseListener.AuthResponseListener;
-import io.hasura.sdk.auth.responseListener.MobileConfirmationResponseListener;
-import io.hasura.sdk.core.HasuraException;
+import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.responseListener.AuthResponseListener;
+import io.hasura.sdk.responseListener.MobileConfirmationResponseListener;
 
 /**
  * Created by amogh on 25/5/17.
  */
 
-public class MobileSignup extends AppCompatActivity{
+public class MobileSignup extends Fragment{
 
     EditText username;
     EditText mobile;
     EditText password;
     Button button;
+    View parentViewHolder;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mobile_signup_activity);
+    }
 
-        username = (EditText) findViewById(R.id.mobile_username);
-        mobile = (EditText) findViewById(R.id.mobile_mobile);
-        password = (EditText) findViewById(R.id.mobile_password);
-        button = (Button) findViewById(R.id.mobile_button);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        parentViewHolder = inflater.inflate(R.layout.mobile_signup_activity,container,false);
+
+        username = (EditText) parentViewHolder.findViewById(R.id.mobile_username);
+        mobile = (EditText) parentViewHolder.findViewById(R.id.mobile_mobile);
+        password = (EditText) parentViewHolder.findViewById(R.id.mobile_password);
+        button = (Button) parentViewHolder.findViewById(R.id.mobile_button);
 
         final HasuraUser user = new HasuraUser();
 
@@ -44,6 +51,13 @@ public class MobileSignup extends AppCompatActivity{
                 user.setUsername(username.getText().toString());
                 user.setPassword(password.getText().toString());
                 user.setMobile(mobile.getText().toString());
+
+                /*
+                    When using signUp username is essential.
+
+                    When you call signup(), HasuraAuth will send you an OTP to verify your mobile number.
+                    The response will contain hasura_roles,hasura_id and auth_token, with auth_token set to null.
+                 */
 
                 user.signUp(new AuthResponseListener() {
                     @Override
@@ -55,18 +69,24 @@ public class MobileSignup extends AppCompatActivity{
                         alert.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+
+                                /*
+                                    Once you receive the OTP, you have to send enter the OTP and call confirmMobile()
+                                    to verify you number.
+                                    Once done, you can now login.
+                                 */
                                 user.confirmMobile(otp.getText().toString(), new MobileConfirmationResponseListener() {
                                     @Override
                                     public void onSuccess() {
                                         Intent i = new Intent(v.getContext(),AuthenticationActivity.class);
                                         startActivity(i);
-                                        finish();
-                                        Toast.makeText(v.getContext(), "Registration successful", Toast.LENGTH_SHORT).show();
+                                        getActivity().finish();
+                                        Toast.makeText(getActivity(), "Registration successful", Toast.LENGTH_SHORT).show();
                                     }
 
                                     @Override
                                     public void onFailure(HasuraException e) {
-                                        Toast.makeText(v.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
@@ -76,12 +96,13 @@ public class MobileSignup extends AppCompatActivity{
 
                     @Override
                     public void onFailure(HasuraException e) {
-                        Toast.makeText(v.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_SHORT).show();
+
                     }
                 });
             }
         });
 
-
+        return parentViewHolder;
     }
 }

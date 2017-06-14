@@ -5,9 +5,14 @@
     android:layout_gravity="center"
     android:gravity="center">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hasura_logo"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You are Logged in"/>
+        android:textSize="20sp"
+        android:text="Welcome to Hasura Login Module"/>
 
 </LinearLayout>
