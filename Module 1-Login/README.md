@@ -6,13 +6,24 @@ This module portrays different ways in which you can use Hasura Auth for SignUp 
 
 Once you have created your android project, you will have to add [Hasura-Android SDK](https://github.com/hasura/android-sdk). 
 
-## 2. OTP SignUp and Login:
+## 2. Initializing your Hasura Project:
+
+To access your Hasura Project through android, you will have to first initialize it.
+
+```
+  Hasura.setProjectName("Project-Name")
+                .enableLogs()
+                .initialise(this);
+
+```
+
+## 3. OTP SignUp and Login:
 
 For using mobile OTP SignUp and Login, you will first have to enable mobile verification in the console and create an account on MSG91.
 Following is a link to a blogpost for setting up mobile verification and MSG91:
 https://medium.com/@amogh.karve/configuring-msg91-and-hasura-console-74184712e950
 
-### 3. OTP SignUp:
+### 4. OTP SignUp:
 Step 1: 
   Create a new HasuraUser object(say "user") and initialize it.
   ```
@@ -60,7 +71,7 @@ Step3:
 Step4:
   Once this is done, you can now login using this username and mobile.
   
-### 4. OTP Login:
+### 5. OTP Login:
 Step 1:
   Create a new HasuraUser object(say "user") and initialize it.
 Step 2:
