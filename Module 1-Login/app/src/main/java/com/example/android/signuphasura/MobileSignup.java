@@ -78,7 +78,7 @@ public class MobileSignup extends Fragment{
                                 user.confirmMobile(otp.getText().toString(), new MobileConfirmationResponseListener() {
                                     @Override
                                     public void onSuccess() {
-                                        Intent i = new Intent(v.getContext(),AuthenticationActivity.class);
+                                        Intent i = new Intent(v.getContext(),MainActivity.class);
                                         startActivity(i);
                                         getActivity().finish();
                                         Toast.makeText(getActivity(), "Registration successful", Toast.LENGTH_SHORT).show();

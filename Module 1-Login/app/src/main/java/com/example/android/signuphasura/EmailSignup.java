@@ -61,7 +61,7 @@ public class EmailSignup extends Fragment {
                     @Override
                     public void onSuccess(HasuraUser hasuraUser) {
                         Toast.makeText(v.getContext(), "Email sent. Please verify and then login", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(v.getContext(),AuthenticationActivity.class);
+                        Intent i = new Intent(v.getContext(),MainActivity.class);
                         startActivity(i);
                         getActivity().finish();
                     }
