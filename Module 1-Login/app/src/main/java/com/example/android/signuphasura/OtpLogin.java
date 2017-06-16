@@ -24,6 +24,7 @@ import io.hasura.sdk.responseListener.OtpStatusListener;
 public class OtpLogin extends Fragment {
 
     EditText mobile;
+    EditText username;
     Button button;
     View parentViewHolder;
 
@@ -38,6 +39,7 @@ public class OtpLogin extends Fragment {
 
         final HasuraUser user = new HasuraUser();
 
+        username = (EditText) parentViewHolder.findViewById(R.id.otp_username);
         mobile = (EditText) parentViewHolder.findViewById(R.id.otp_mobile);
         button = (Button) parentViewHolder.findViewById(R.id.otp_button);
 
@@ -45,6 +47,7 @@ public class OtpLogin extends Fragment {
             @Override
             public void onClick(final View v) {
                 user.setMobile(mobile.getText().toString());
+                user.setUsername(username.getText().toString());
 
                 /*
                     To use OTP login, you must first enable OTP login.
@@ -65,9 +68,9 @@ public class OtpLogin extends Fragment {
                     @Override
                     public void onSuccess() {
 
-                        AlertDialog.Builder alert = new AlertDialog.Builder(v.getContext());
+                        AlertDialog.Builder alert = new AlertDialog.Builder(getActivity().getApplicationContext());
                         alert.setMessage("Enter the OTP you received");
-                        final EditText otp = new EditText(v.getContext());
+                        final EditText otp = new EditText(getActivity().getApplicationContext());
                         alert.setView(otp);
                         alert.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                             @Override
@@ -79,14 +82,14 @@ public class OtpLogin extends Fragment {
                                 user.otpLogin(otp.getText().toString(), new AuthResponseListener() {
                                     @Override
                                     public void onSuccess(HasuraUser hasuraUser) {
-                                        Intent i = new Intent(v.getContext(),SampleActivity.class);
+                                        Intent i = new Intent(getActivity().getApplicationContext(),SampleActivity.class);
                                         startActivity(i);
                                         getActivity().finish();
                                     }
 
                                     @Override
                                     public void onFailure(HasuraException e) {
-                                        Toast.makeText(v.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
@@ -107,18 +110,19 @@ public class OtpLogin extends Fragment {
                                 user.otpLogin(otp.getText().toString(), new AuthResponseListener() {
                                     @Override
                                     public void onSuccess(HasuraUser hasuraUser) {
-                                        Intent i = new Intent(v.getContext(),SampleActivity.class);
+                                        Intent i = new Intent(getActivity().getApplicationContext(),SampleActivity.class);
                                         startActivity(i);
-                                        getActivity().finish();
+                                        //getActivity().finish();
                                     }
 
                                     @Override
                                     public void onFailure(HasuraException e) {
-                                        Toast.makeText(v.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
                         });
+                        alert.show();
                     }
 
                 });

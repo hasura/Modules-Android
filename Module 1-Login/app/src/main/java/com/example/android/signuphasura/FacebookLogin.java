@@ -54,6 +54,7 @@ public class FacebookLogin extends Fragment {
         loginButton = (LoginButton) parentViewHolder.findViewById(R.id.facebook_login_button);
 
         loginButton.setReadPermissions("email");
+        loginButton.setFragment(this);
 
         LoginManager.getInstance().registerCallback(callbackmanager, new FacebookCallback<LoginResult>() {
             @Override

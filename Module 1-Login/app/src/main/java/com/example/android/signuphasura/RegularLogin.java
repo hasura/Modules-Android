@@ -50,7 +50,7 @@ public class RegularLogin extends Fragment {
                     public void onSuccess(HasuraUser hasuraUser) {
                         Intent i = new Intent(getActivity().getApplicationContext(),SampleActivity.class);
                         startActivity(i);
-                        getActivity().finish();
+                        //getActivity().finish();
                         Toast.makeText(getActivity().getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                     }
 

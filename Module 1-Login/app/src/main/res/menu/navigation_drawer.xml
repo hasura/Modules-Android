@@ -24,4 +24,10 @@
 
     <item android:title="Google-Login"
         android:id="@+id/nav_8"/>
+
+    <item android:title="LinkedIn-Login"
+        android:id="@+id/nav_9"/>
+
+    <item android:title="Github-Login"
+        android:id="@+id/nav_10"/>
 </menu>

@@ -5,13 +5,22 @@
     android:gravity="center">
 
 
-    <EditText
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/otp_mobile"
-        android:hint="Mobile number"/>
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/otp_mobile"
+            android:hint="Mobile number"/>
 
-
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/otp_username"
+            android:hint="Username"/>
+    </LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

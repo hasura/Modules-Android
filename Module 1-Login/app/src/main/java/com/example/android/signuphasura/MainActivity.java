@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_MOBILE_OTP_LOGIN = "Mobile-OTP-Login";
     private static final String TAG_FACEBOOK_LOGIN = "Facebook-Login";
     private static final String TAG_GOOGLE_LOGIN = "Google-Login";
+    private static final String TAG_LINKEDIN_LOGIN = "LinkedIn-Login";
+    private static final String TAG_GITHUB_LOGIN = "Github-Login";
 
     public static String CURRENT_TAG = TAG_HOME;
 
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         navHeader = navigationView.getHeaderView(0);
 
-        activityTitles = new String[]{"Home", "Register", "Mobile-SignUp","Email-SignUp","Login","OTP-Login","Facebook-Login","Google-Login"};
+        activityTitles = new String[]{"Home", "Register", "Mobile-SignUp","Email-SignUp","Login","OTP-Login","Facebook-Login","Google-Login","LinkedIn-Login","Github-Login"};
 
         loadNavHeader();
 
@@ -124,6 +126,10 @@ public class MainActivity extends AppCompatActivity {
                 return new FacebookLogin();
             case 7:
                 return new GoogleLogin();
+            case 8:
+                return new LinkedInLogin();
+            case 9:
+                return new GithubLogin();
             default:
                 return new HasuraHomePage();
         }
@@ -165,6 +171,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_8:
                         navItemIndex = 7;
                         CURRENT_TAG = TAG_GOOGLE_LOGIN;
+                        break;
+                    case R.id.nav_9:
+                        navItemIndex = 8;
+                        CURRENT_TAG = TAG_LINKEDIN_LOGIN;
+                        break;
+                    case R.id.nav_10:
+                        navItemIndex = 9;
+                        CURRENT_TAG = TAG_GITHUB_LOGIN;
                         break;
                     default:
                         navItemIndex = 0;
