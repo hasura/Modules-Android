@@ -49,7 +49,6 @@ public class EmailSignup extends Fragment {
                 user.setPassword(password.getText().toString());
                 user.setEmail(email.getText().toString());
 
-                user.setMobile("8888401705");
 
                 /*
                     Using email verification , Hasura Auth will send an email to the given email-id.

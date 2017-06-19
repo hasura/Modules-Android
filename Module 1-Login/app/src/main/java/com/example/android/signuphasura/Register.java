@@ -46,7 +46,7 @@ public class Register extends Fragment {
             public void onClick(View v) {
                 user.setUsername(username.getText().toString());
                 user.setPassword(password.getText().toString());
-                
+
                 user.signUp(new AuthResponseListener() {
                     @Override
                     public void onSuccess(HasuraUser hasuraUser) {
