@@ -6,6 +6,7 @@ import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 
 import io.hasura.sdk.Hasura;
+import io.hasura.sdk.ProjectConfig;
 
 /**
  * Created by amogh on 25/5/17.
@@ -25,7 +26,10 @@ public class Initialization extends Application {
         /*
             Initializing your Hasura Project.
          */
-        Hasura.setProjectName("hello70")
+
+        Hasura.setProjectConfig(new ProjectConfig.Builder()
+                .setProjectName("hello70")
+                .build())
                 .enableLogs()
                 .initialise(this);
     }

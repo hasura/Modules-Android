@@ -12,10 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import io.hasura.sdk.auth.HasuraUser;
-import io.hasura.sdk.auth.responseListener.AuthResponseListener;
-import io.hasura.sdk.auth.responseListener.MobileConfirmationResponseListener;
-import io.hasura.sdk.core.HasuraException;
+import io.hasura.sdk.Hasura;
+import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.exception.HasuraException;
+import io.hasura.sdk.responseListener.MobileConfirmationResponseListener;
+import io.hasura.sdk.responseListener.SignUpResponseListener;
 
 
 /**
@@ -46,7 +47,7 @@ public class SignUpFragment extends Fragment {
         mobile.setFocusable(true);
         mobile.requestFocus();
 
-        final HasuraUser user = new HasuraUser();
+        final HasuraUser user = Hasura.getClient().getUser();
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,11 +55,11 @@ public class SignUpFragment extends Fragment {
                 user.setUsername(username.getText().toString());
                 user.setMobile(mobile.getText().toString());
 
-                user.enableMobileOtpLogin();
+                //user.enableMobileOtpLogin();
 
-                user.signUp(new AuthResponseListener() {
+                user.otpSignUp(new SignUpResponseListener() {
                     @Override
-                    public void onSuccess(HasuraUser hasuraUser) {
+                    public void onSuccessAwaitingVerification(HasuraUser hasuraUser) {
                         final AlertDialog.Builder alert = new AlertDialog.Builder(v.getContext());
                         alert.setMessage("Enter the otp you received");
                         final EditText otp = new EditText(v.getContext());
@@ -68,7 +69,8 @@ public class SignUpFragment extends Fragment {
                             public void onClick(DialogInterface dialog, int which) {
                                 user.confirmMobile(otp.getText().toString(), new MobileConfirmationResponseListener() {
                                     @Override
-                                    public void onSuccess() {
+                                    public void onSuccess(String s) {
+                                        Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show();
                                         Intent i = new Intent(getActivity().getApplicationContext(),Profile.class);
                                         startActivity(i);
                                         getActivity().finish();
@@ -82,6 +84,11 @@ public class SignUpFragment extends Fragment {
                             }
                         });
                         alert.show();
+                    }
+
+                    @Override
+                    public void onSuccess(HasuraUser hasuraUser) {
+
                     }
 
                     @Override

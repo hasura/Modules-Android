@@ -9,9 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraUser;
-import io.hasura.sdk.responseListener.AuthResponseListener;
+import io.hasura.sdk.exception.HasuraException;
+import io.hasura.sdk.responseListener.SignUpResponseListener;
 
 /**
  * Created by amogh on 25/5/17.
@@ -33,7 +34,7 @@ public class Register extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         parentViewHolder = inflater.inflate(R.layout.register_activity,container,false);
 
-        final HasuraUser user = new HasuraUser();
+        final HasuraUser user = Hasura.getClient().getUser();
 
         username = (EditText) parentViewHolder.findViewById(R.id.register_username);
         password = (EditText) parentViewHolder.findViewById(R.id.register_password);
@@ -47,7 +48,13 @@ public class Register extends Fragment {
                 user.setUsername(username.getText().toString());
                 user.setPassword(password.getText().toString());
 
-                user.signUp(new AuthResponseListener() {
+                user.signUp(new SignUpResponseListener() {
+
+                    @Override
+                    public void onSuccessAwaitingVerification(HasuraUser hasuraUser) {
+
+                    }
+
                     @Override
                     public void onSuccess(HasuraUser hasuraUser) {
                         Toast.makeText(getActivity(), "Registration Successful", Toast.LENGTH_SHORT).show();
@@ -56,8 +63,8 @@ public class Register extends Fragment {
                     @Override
                     public void onFailure(HasuraException e) {
                         Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_SHORT).show();
-
                     }
+
                 });
             }
         });

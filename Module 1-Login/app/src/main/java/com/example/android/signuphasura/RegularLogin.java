@@ -10,8 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.exception.HasuraException;
 import io.hasura.sdk.responseListener.AuthResponseListener;
 
 /**
@@ -37,7 +38,7 @@ public class RegularLogin extends Fragment {
         password = (EditText) parentViewHolder.findViewById(R.id.login_password);
         button = (Button) parentViewHolder.findViewById(R.id.regular_login_button);
 
-        final HasuraUser user = new HasuraUser();
+        final HasuraUser user = Hasura.getClient().getUser();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +48,7 @@ public class RegularLogin extends Fragment {
 
                 user.login(new AuthResponseListener() {
                     @Override
-                    public void onSuccess(HasuraUser hasuraUser) {
+                    public void onSuccess(String s) {
                         Intent i = new Intent(getActivity().getApplicationContext(),SampleActivity.class);
                         startActivity(i);
                         //getActivity().finish();
@@ -57,7 +58,6 @@ public class RegularLogin extends Fragment {
                     @Override
                     public void onFailure(HasuraException e) {
                         Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
-
                     }
 
                 });

@@ -16,8 +16,9 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.exception.HasuraException;
 import io.hasura.sdk.responseListener.AuthResponseListener;
 
 import static io.hasura.sdk.HasuraSocialLoginType.GOOGLE;
@@ -44,7 +45,7 @@ public class GoogleLogin extends Fragment implements GoogleApiClient.OnConnectio
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         parentViewHolder = inflater.inflate(R.layout.google_login,container,false);
 
-        user = new HasuraUser();
+        user = Hasura.getClient().getUser();
 
         signInButton = (SignInButton) parentViewHolder.findViewById(R.id.google_login_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
@@ -90,15 +91,16 @@ public class GoogleLogin extends Fragment implements GoogleApiClient.OnConnectio
 
             user.socialLogin(GOOGLE, result.getSignInAccount().getIdToken(), new AuthResponseListener() {
                 @Override
-                public void onSuccess(HasuraUser hasuraUser) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+                public void onSuccess(String s) {
+                    Toast.makeText(getActivity().getApplicationContext(), s, Toast.LENGTH_SHORT).show();
+
                 }
 
                 @Override
                 public void onFailure(HasuraException e) {
                     Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
-
                 }
+
             });
         }else{
             Toast.makeText(getActivity(), "Google Failure", Toast.LENGTH_SHORT).show();

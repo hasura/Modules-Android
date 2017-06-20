@@ -16,10 +16,11 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import io.hasura.sdk.auth.HasuraUser;
-import io.hasura.sdk.core.Callback;
-import io.hasura.sdk.core.Hasura;
-import io.hasura.sdk.core.HasuraException;
+import io.hasura.sdk.Callback;
+import io.hasura.sdk.Hasura;
+import io.hasura.sdk.HasuraClient;
+import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.exception.HasuraException;
 
 /**
  * Created by amogh on 1/6/17.
@@ -31,6 +32,7 @@ public class Profile extends AppCompatActivity {
     EditText status;
     ImageView picture;
     Button button;
+    HasuraClient client;
 
     int update = 0;//used as a flag
 
@@ -53,23 +55,20 @@ public class Profile extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.profile_toolbar);
         toolbar.setTitle("Set Up Your Profile");
 
-        final HasuraUser user = Hasura.currentUser();
+        final HasuraUser user = Hasura.getClient().getUser();
 
+        client = Hasura.getClient();
 
-
-        if(Hasura.currentUser() != null){
+        if(Hasura.getClient().getUser() != null){
 
             //Make a call and get details stored in database and update the corresponding views.
 
-            user.getQueryBuilder()
-                    .useDataService()
+            client.useDataService()
                     .setRequestBody(new SelectQuery(user.getId()))
                     .expectResponseTypeArrayOf(UserDetails.class)
-                    .build()
-                    .executeAsync(new Callback<List<UserDetails>, HasuraException>() {
+                    .enqueue(new Callback<List<UserDetails>, HasuraException>() {
                         @Override
                         public void onSuccess(List<UserDetails> userDetailsList) {
-
                             if(userDetailsList.size() > 0)
                                 update = 1;
 
@@ -83,9 +82,10 @@ public class Profile extends AppCompatActivity {
                         @Override
                         public void onFailure(HasuraException e) {
                             Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
-
                         }
                     });
+
+
 
             /*picture.setImageBitmap(Photo.getImage(details.getPicture()));*/
         }
@@ -106,18 +106,16 @@ public class Profile extends AppCompatActivity {
                 userDetails.setName(name.getText().toString().trim());
                 userDetails.setStatus(status.getText().toString().trim());
                 //userDetails.setPicture(image);
-                userDetails.setId(Hasura.currentUser().getId());
+                userDetails.setId(Hasura.getClient().getUser().getId());
 
 
                 if(update == 0) {
-                    user.getQueryBuilder()
-                            .useDataService()
+                    client.useDataService()
                             .setRequestBody(new InsertQuery(userDetails))
-                            .expectResponseOfType(ResponseMessage.class)
-                            .build()
-                            .executeAsync(new Callback<ResponseMessage, HasuraException>() {
+                            .expectResponseType(ResponseMessage.class)
+                            .enqueue(new Callback<ResponseMessage, HasuraException>() {
                                 @Override
-                                public void onSuccess(ResponseMessage response) {
+                                public void onSuccess(ResponseMessage responseMessage) {
                                     Toast.makeText(Profile.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -127,14 +125,12 @@ public class Profile extends AppCompatActivity {
                                 }
                             });
                 } else {
-                    user.getQueryBuilder()
-                            .useDataService()
+                    client.useDataService()
                             .setRequestBody(new UpdateQuery(userDetails))
-                            .expectResponseOfType(ResponseMessage.class)
-                            .build()
-                            .executeAsync(new Callback<ResponseMessage, HasuraException>() {
+                            .expectResponseType(ResponseMessage.class)
+                            .enqueue(new Callback<ResponseMessage, HasuraException>() {
                                 @Override
-                                public void onSuccess(ResponseMessage response) {
+                                public void onSuccess(ResponseMessage responseMessage) {
                                     Toast.makeText(Profile.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
                                 }
 

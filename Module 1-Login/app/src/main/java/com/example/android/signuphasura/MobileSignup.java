@@ -12,10 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraUser;
-import io.hasura.sdk.responseListener.AuthResponseListener;
+import io.hasura.sdk.exception.HasuraException;
 import io.hasura.sdk.responseListener.MobileConfirmationResponseListener;
+import io.hasura.sdk.responseListener.SignUpResponseListener;
 
 /**
  * Created by amogh on 25/5/17.
@@ -43,7 +44,7 @@ public class MobileSignup extends Fragment{
         password = (EditText) parentViewHolder.findViewById(R.id.mobile_password);
         button = (Button) parentViewHolder.findViewById(R.id.mobile_button);
 
-        final HasuraUser user = new HasuraUser();
+        final HasuraUser user = Hasura.getClient().getUser();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,9 +60,9 @@ public class MobileSignup extends Fragment{
                     The response will contain hasura_roles,hasura_id and auth_token, with auth_token set to null.
                  */
 
-                user.signUp(new AuthResponseListener() {
+                user.otpSignUp(new SignUpResponseListener() {
                     @Override
-                    public void onSuccess(HasuraUser hasuraUser) {
+                    public void onSuccessAwaitingVerification(HasuraUser hasuraUser) {
                         AlertDialog.Builder alert = new AlertDialog.Builder(v.getContext());
                         final EditText otp = new EditText(v.getContext());
                         alert.setMessage("Enter the otp you received");
@@ -76,12 +77,13 @@ public class MobileSignup extends Fragment{
                                     Once done, you can now login.
                                  */
                                 user.confirmMobile(otp.getText().toString(), new MobileConfirmationResponseListener() {
+
                                     @Override
-                                    public void onSuccess() {
+                                    public void onSuccess(String s) {
                                         Intent i = new Intent(v.getContext(),MainActivity.class);
                                         startActivity(i);
                                         getActivity().finish();
-                                        Toast.makeText(getActivity(), "Registration successful", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show();
                                     }
 
                                     @Override
@@ -95,10 +97,15 @@ public class MobileSignup extends Fragment{
                     }
 
                     @Override
-                    public void onFailure(HasuraException e) {
-                        Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_SHORT).show();
+                    public void onSuccess(HasuraUser hasuraUser) {
 
                     }
+
+                    @Override
+                    public void onFailure(HasuraException e) {
+                        Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_SHORT).show();
+                    }
+
                 });
             }
         });

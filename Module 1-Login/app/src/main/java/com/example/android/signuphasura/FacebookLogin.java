@@ -15,8 +15,9 @@ import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
-import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.exception.HasuraException;
 import io.hasura.sdk.responseListener.AuthResponseListener;
 
 import static io.hasura.sdk.HasuraSocialLoginType.FACEBOOK;
@@ -48,7 +49,7 @@ public class FacebookLogin extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         parentViewHolder = inflater.inflate(R.layout.facebook_login,container,false);
 
-        final HasuraUser user = new HasuraUser();
+        final HasuraUser user = Hasura.getClient().getUser();
 
         callbackmanager = CallbackManager.Factory.create();
         loginButton = (LoginButton) parentViewHolder.findViewById(R.id.facebook_login_button);
@@ -68,15 +69,16 @@ public class FacebookLogin extends Fragment {
                  */
                 user.socialLogin(FACEBOOK, loginResult.getAccessToken().getToken(), new AuthResponseListener() {
                     @Override
-                    public void onSuccess(HasuraUser hasuraUser) {
-                        Toast.makeText(getActivity().getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
+                    public void onSuccess(String s) {
+                        Toast.makeText(getActivity().getApplicationContext(), s, Toast.LENGTH_SHORT).show();
+
                     }
 
                     @Override
                     public void onFailure(HasuraException e) {
                         Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
-
                     }
+
 
                 });
                 Toast.makeText(getActivity().getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();

@@ -10,9 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraUser;
-import io.hasura.sdk.responseListener.AuthResponseListener;
+import io.hasura.sdk.exception.HasuraException;
+import io.hasura.sdk.responseListener.SignUpResponseListener;
 
 /**
  * Created by amogh on 25/5/17.
@@ -40,7 +41,7 @@ public class EmailSignup extends Fragment {
         button = (Button) parentViewHolder.findViewById(R.id.email_button);
 
 
-        final HasuraUser user = new HasuraUser();
+        final HasuraUser user = Hasura.getClient().getUser();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +57,12 @@ public class EmailSignup extends Fragment {
                     Once done, he can then login.
                  */
 
-                user.signUp(new AuthResponseListener() {
+                user.signUp(new SignUpResponseListener() {
+                    @Override
+                    public void onSuccessAwaitingVerification(HasuraUser hasuraUser) {
+
+                    }
+
                     @Override
                     public void onSuccess(HasuraUser hasuraUser) {
                         Toast.makeText(v.getContext(), "Email sent. Please verify and then login", Toast.LENGTH_SHORT).show();
@@ -68,8 +74,8 @@ public class EmailSignup extends Fragment {
                     @Override
                     public void onFailure(HasuraException e) {
                         Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_SHORT).show();
-
                     }
+
                 });
 
             }

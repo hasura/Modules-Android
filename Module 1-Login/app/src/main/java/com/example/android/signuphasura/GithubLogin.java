@@ -22,6 +22,7 @@ import android.webkit.WebViewClient;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
+import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraUser;
 
 /**
@@ -64,7 +65,7 @@ public class GithubLogin extends Fragment{
         webView.requestFocus(View.FOCUS_DOWN);
         webView.getSettings().setJavaScriptEnabled(true);
 
-        user = new HasuraUser();
+        user = Hasura.getClient().getUser();
 
         webView.setWebChromeClient(new WebChromeClient(){
             public boolean onConsoleMessage(ConsoleMessage consoleMessage){

@@ -13,7 +13,8 @@ import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.hasura.sdk.core.Hasura;
+import io.hasura.sdk.Hasura;
+import io.hasura.sdk.ProjectConfig;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,12 +32,14 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setLogo(R.drawable.digitalocean_hasura_logo_name);
         setSupportActionBar(toolbar);
 
-        Hasura.setProjectName("hello70")
+        Hasura.setProjectConfig(new ProjectConfig.Builder()
+                .setProjectName("hello70")
+                .build())
                 .enableLogs()
                 .initialise(this);
 
 
-        if(Hasura.currentUser() != null){
+        if(Hasura.getClient().getUser().getAuthToken() != null){
             Intent i = new Intent(MainActivity.this,Profile.class);
             startActivity(i);
             finish();

@@ -12,8 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import io.hasura.sdk.HasuraException;
+import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.exception.HasuraException;
 import io.hasura.sdk.responseListener.AuthResponseListener;
 import io.hasura.sdk.responseListener.OtpStatusListener;
 
@@ -37,7 +38,7 @@ public class OtpLogin extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         parentViewHolder = inflater.inflate(R.layout.mobile_login_activity,container,false);
 
-        final HasuraUser user = new HasuraUser();
+        final HasuraUser user = Hasura.getClient().getUser();
 
         username = (EditText) parentViewHolder.findViewById(R.id.otp_username);
         mobile = (EditText) parentViewHolder.findViewById(R.id.otp_mobile);
@@ -52,7 +53,6 @@ public class OtpLogin extends Fragment {
                 /*
                     To use OTP login, you must first enable OTP login.
                  */
-                user.enableMobileOtpLogin();
 
                 /*
                     To login using OTP, you ask HasuraAuth to send an OTP to your mobile.
@@ -66,8 +66,7 @@ public class OtpLogin extends Fragment {
                  */
                 user.sendOtpToMobile(new OtpStatusListener() {
                     @Override
-                    public void onSuccess() {
-
+                    public void onSuccess(String s) {
                         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity().getApplicationContext());
                         alert.setMessage("Enter the OTP you received");
                         final EditText otp = new EditText(getActivity().getApplicationContext());
@@ -81,7 +80,7 @@ public class OtpLogin extends Fragment {
                                  */
                                 user.otpLogin(otp.getText().toString(), new AuthResponseListener() {
                                     @Override
-                                    public void onSuccess(HasuraUser hasuraUser) {
+                                    public void onSuccess(String s) {
                                         Intent i = new Intent(getActivity().getApplicationContext(),SampleActivity.class);
                                         startActivity(i);
                                         getActivity().finish();
@@ -109,10 +108,9 @@ public class OtpLogin extends Fragment {
 
                                 user.otpLogin(otp.getText().toString(), new AuthResponseListener() {
                                     @Override
-                                    public void onSuccess(HasuraUser hasuraUser) {
+                                    public void onSuccess(String s) {
                                         Intent i = new Intent(getActivity().getApplicationContext(),SampleActivity.class);
                                         startActivity(i);
-                                        //getActivity().finish();
                                     }
 
                                     @Override
@@ -124,7 +122,6 @@ public class OtpLogin extends Fragment {
                         });
                         alert.show();
                     }
-
                 });
             }
         });
