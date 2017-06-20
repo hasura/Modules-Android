@@ -13,7 +13,9 @@ Once you have created your android project, you will have to add [Hasura-Android
 To access your Hasura Project through android, you will have to first initialize it.
 
 ```
-  Hasura.setProjectName("Project-Name")
+  Hasura.setProjectConfig(new ProjectConfig.Builder()
+                .setProjectName("Project-Name")
+                .build())
                 .enableLogs()
                 .initialise(this);
 
@@ -31,38 +33,42 @@ You can implement any one of the methods in the above module for performing Sign
 ### Step 1:
   Create a new HasuraUser object(say "user") and initialize it.
   ```
-  Final HasuraUser user = Hasura.currentUser();
+  HasuraUser user = Hasura.getClient.getUser();
   
   ```
 ### Step 2:
+  Create a new HasuraClient object(say "user") and initialize it.
+  ```
+  HasuraClient client = Hasura.getClient();
+  
+  ```
+### Step 3:
   Following is a small code snippet showing how to use the dataService. This is a sample code in which my RequestBody is of type SelectQuery and I expect my response of type UserDetails.class 
   ```
-  user.getQueryBuilder()
-                    .useDataService()
+  client.useDataService()
                     .setRequestBody(new SelectQuery(user.getId()))
-                    .expectResponseTypeArrayOf(UserDetails.class)
-                    .build()
-                    .executeAsync(new Callback<List<UserDetails>, HasuraException>() {
+                    .expectResponseTypeOf(UserDetails.class)
+                    .enqueue(new Callback<UserDetails, HasuraException>() {
                         @Override
-                        public void onSuccess(List<UserDetails> userDetailsList) {
-                        
+                        public void onSuccess(UserDetails userDetails) {
+                            
                         }
 
                         @Override
                         public void onFailure(HasuraException e) {
-
+                        
                         }
                     });
   
   ```
-  Here I am expecting an array as a response, so the above response type.
+  Here I am expecting a single response, so the above response type.
   
-  If you are expecting a single response, you can modify the particular line to 
+  If you are expecting an array type response, you can modify the particular line to 
   ```
-  .expectResponseType(UserDetails.class)
+  .expectResponseTypeArrayOf(UserDetails.class)
   
   ```
-  Note that doing this would also modify the arguments of .executeAsync() to adapt to single response.
+  Note that doing this would also modify the arguments of .enqueue() to adapt to array response.
   
 ## 5. Data Modelling:
   The SelectQuery above, is the select query for selecting data from the database.
