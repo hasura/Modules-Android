@@ -11,7 +11,9 @@ Once you have created your android project, you will have to add [Hasura-Android
 To access your Hasura Project through android, you will have to first initialize it.
 
 ```
-  Hasura.setProjectName("Project-Name")
+  Hasura.setProjectConfig(new ProjectConfig.Builder()
+                .setProjectName("Project-Name")
+                .build())
                 .enableLogs()
                 .initialise(this);
 
@@ -27,7 +29,7 @@ https://medium.com/@amogh.karve/configuring-msg91-and-hasura-console-74184712e95
 Step 1: 
   Create a new HasuraUser object(say "user") and initialize it.
   ```
-  Final HasuraUser user = new HasuraUser();
+  HasuraUser user = Hasura.getClient().getUser();
   
   ```
   
@@ -37,9 +39,13 @@ Step2:
   Then call the user.signup() to request otp.
   
   ```
-  user.signUp(new AuthResponseListener() {
+  user.otpSignUp(new SignUpResponseListener() {
                     @Override
-                    public void onSuccess(HasuraUser hasuraUser) {
+                    public void onSuccessAwaitingVerification(HasuraUser hasuraUser) {
+                    
+                    }
+                    @Override
+                    public void onSuccess(String s) {
                         
                     }
 
@@ -51,7 +57,7 @@ Step2:
   
   ```
 Step3:
-  If the request is successful, receive the otp in the onSuccess() method.
+  If the request is successful, receive the otp in the onSuccessAwaitingVerification() method.
   Then call user.confirmMobile(otp,MobileConfirmationResponseListener) to confirm the otp.
   
   ```
