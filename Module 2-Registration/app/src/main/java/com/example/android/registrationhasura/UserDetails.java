@@ -16,6 +16,9 @@ public class UserDetails {
     @SerializedName("user_id")
     int user_id;
 
+    @SerializedName("file_id")
+    String fileId;
+
     public void setName(String name){
         this.name = name;
     }
@@ -32,6 +35,10 @@ public class UserDetails {
         this.user_id = id;
     }
 
+    public void setFileId(String fileId){
+        this.fileId = fileId;
+    }
+
     public String getName(){
         return name;
     }
@@ -46,6 +53,10 @@ public class UserDetails {
 
     public int getId(){
         return user_id;
+    }
+
+    public String getFileId(){
+        return fileId;
     }
 
     public UserDetails(){

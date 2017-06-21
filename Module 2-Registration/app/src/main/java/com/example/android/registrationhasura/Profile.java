@@ -14,6 +14,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 
 import io.hasura.sdk.Callback;
@@ -21,6 +25,9 @@ import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
+import io.hasura.sdk.model.response.FileUploadResponse;
+import io.hasura.sdk.responseListener.FileDownloadResponseListener;
+import io.hasura.sdk.responseListener.FileUploadResponseListener;
 
 /**
  * Created by amogh on 1/6/17.
@@ -33,11 +40,9 @@ public class Profile extends AppCompatActivity {
     ImageView picture;
     Button button;
     HasuraClient client;
+    String fileId;
 
     int update = 0;//used as a flag
-
-    //private static final String DATABASE_NAME = "chatapp";
-    //private static final int DATABASE_VERSION = 2;
 
     private static final int CAMERA_REQUEST = 100;
 
@@ -61,8 +66,6 @@ public class Profile extends AppCompatActivity {
 
         if(Hasura.getClient().getUser() != null){
 
-            //Make a call and get details stored in database and update the corresponding views.
-
             client.useDataService()
                     .setRequestBody(new SelectQuery(user.getId()))
                     .expectResponseTypeArrayOf(UserDetails.class)
@@ -72,6 +75,7 @@ public class Profile extends AppCompatActivity {
                             if(userDetailsList.size() > 0)
                                 update = 1;
 
+                            fileId = userDetailsList.get(0).getFileId();
                             Toast.makeText(Profile.this, "Welcome", Toast.LENGTH_SHORT).show();
                             name.setText(userDetailsList.get(0).getName());
                             status.setText(userDetailsList.get(0).getStatus());
@@ -84,10 +88,25 @@ public class Profile extends AppCompatActivity {
                             Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     });
+            if(update == 1) {
+                client.useFileStoreService()
+                        .downloadFile(fileId, new FileDownloadResponseListener() {
+                            @Override
+                            public void onDownloadComplete(byte[] bytes) {
+                                picture.setImageBitmap(Photo.getImage(bytes));
+                            }
 
+                            @Override
+                            public void onDownloadFailed(HasuraException e) {
+                                Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
+                            }
 
+                            @Override
+                            public void onDownloading(float v) {
 
-            /*picture.setImageBitmap(Photo.getImage(details.getPicture()));*/
+                            }
+                        });
+            }
         }
         picture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,12 +120,25 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Bitmap bitmap = ((BitmapDrawable)picture.getDrawable()).getBitmap();
-                //byte[] image = Photo.getBytes(bitmap);
-                UserDetails userDetails = new UserDetails();
+                byte[] image = Photo.getBytes(bitmap);
+                final UserDetails userDetails = new UserDetails();
                 userDetails.setName(name.getText().toString().trim());
                 userDetails.setStatus(status.getText().toString().trim());
-                //userDetails.setPicture(image);
                 userDetails.setId(Hasura.getClient().getUser().getId());
+
+
+                client.useFileStoreService()
+                        .uploadFile(user.getId() + "picture", image, "image/*", new FileUploadResponseListener() {
+                                 @Override
+                                 public void onUploadComplete(FileUploadResponse fileUploadResponse) {
+                                     userDetails.setFileId(fileUploadResponse.getFile_id());
+                                 }
+
+                                 @Override
+                                 public void onUploadFailed(HasuraException e) {
+                                     Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                 }
+                        });
 
 
                 if(update == 0) {
@@ -154,6 +186,38 @@ public class Profile extends AppCompatActivity {
         }
     }
 
+    /*public File getFile(byte[] bytes){
 
+        ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
+        ObjectInputStream ois = null;
+        try {
+            ois = new ObjectInputStream(bis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        File fileFromBytes = null;
+        try {
+            fileFromBytes = (File) ois.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            bis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+        return fileFromBytes;
+    }*/
 }
 
