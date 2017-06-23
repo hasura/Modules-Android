@@ -14,10 +14,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.List;
 
 import io.hasura.sdk.Callback;
@@ -26,7 +22,6 @@ import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
 import io.hasura.sdk.model.response.FileUploadResponse;
-import io.hasura.sdk.responseListener.FileDownloadResponseListener;
 import io.hasura.sdk.responseListener.FileUploadResponseListener;
 
 /**
@@ -89,7 +84,7 @@ public class Profile extends AppCompatActivity {
                         }
                     });
             if(update == 1) {
-                client.useFileStoreService()
+                /*client.useFileStoreService()
                         .downloadFile(fileId, new FileDownloadResponseListener() {
                             @Override
                             public void onDownloadComplete(byte[] bytes) {
@@ -105,7 +100,7 @@ public class Profile extends AppCompatActivity {
                             public void onDownloading(float v) {
 
                             }
-                        });
+                        });*/
             }
         }
         picture.setOnClickListener(new View.OnClickListener() {
@@ -126,9 +121,8 @@ public class Profile extends AppCompatActivity {
                 userDetails.setStatus(status.getText().toString().trim());
                 userDetails.setId(Hasura.getClient().getUser().getId());
 
-
                 client.useFileStoreService()
-                        .uploadFile(user.getId() + "picture", image, "image/*", new FileUploadResponseListener() {
+                        .uploadFile(user.getId() + "_picture", image, "image/*", new FileUploadResponseListener() {
                                  @Override
                                  public void onUploadComplete(FileUploadResponse fileUploadResponse) {
                                      userDetails.setFileId(fileUploadResponse.getFile_id());
@@ -141,7 +135,7 @@ public class Profile extends AppCompatActivity {
                         });
 
 
-                if(update == 0) {
+                /*if(update == 0) {
                     client.useDataService()
                             .setRequestBody(new InsertQuery(userDetails))
                             .expectResponseType(ResponseMessage.class)
@@ -171,7 +165,7 @@ public class Profile extends AppCompatActivity {
                                     Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
                                 }
                             });
-                }
+                }*/
             }
         });
 
