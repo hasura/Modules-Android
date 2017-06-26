@@ -12,11 +12,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.net.URISyntaxException;
+
 import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
 import io.hasura.sdk.responseListener.AuthResponseListener;
 import io.hasura.sdk.responseListener.OtpStatusListener;
+import io.socket.client.IO;
+import io.socket.client.Socket;
 
 /**
  * Created by amogh on 1/6/17.
@@ -28,6 +32,20 @@ public class LoginFragment extends Fragment {
     Button login_button;
     View parentHolder;
     EditText username;
+
+    private Socket socket;{
+        try{
+            socket = IO.socket("http://192.168.0.131:3000");
+        }catch(URISyntaxException e){
+            throw new RuntimeException(e);
+        }
+
+        setSocket(socket);
+    }
+
+    public void setSocket(Socket socket) {
+        Global.socket = socket;
+    }
 
     HasuraUser user = Hasura.getClient().getUser();
 
@@ -98,6 +116,8 @@ public class LoginFragment extends Fragment {
                                 user.otpLogin(otp.getText().toString(), new AuthResponseListener() {
                                     @Override
                                     public void onSuccess(String s) {
+                                        socket.connect();
+                                        socket.emit("join",user.getId());
                                         Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show();
                                         Intent i = new Intent(getActivity().getApplicationContext(),ContactsActivity.class);
                                         startActivity(i);

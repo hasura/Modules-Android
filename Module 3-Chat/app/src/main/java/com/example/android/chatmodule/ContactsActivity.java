@@ -1,7 +1,6 @@
 package com.example.android.chatmodule;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,6 +19,8 @@ import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
+import io.socket.client.IO;
+import io.socket.client.Socket;
 
 /**
  * Created by amogh on 29/5/17.
@@ -29,6 +31,18 @@ public class ContactsActivity extends AppCompatActivity {
     ContactsListAdapter adapter;
     RecyclerView recyclerView;
     String latestTime;
+
+    private Socket socket;{
+        try{
+            socket = IO.socket("http://192.168.0.131:3000");
+        }catch(URISyntaxException e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void setSocket(Socket socket) {
+        Global.socket = socket;
+    }
 
     HasuraUser user = Hasura.getClient().getUser();
     HasuraClient client = Hasura.getClient();
@@ -42,6 +56,12 @@ public class ContactsActivity extends AppCompatActivity {
         setContentView(R.layout.contacts_activity);
 
         final DataBaseHandler db = new DataBaseHandler(this,DATABASE_NAME,null,DATABASE_VERSION);
+
+        socket.connect();
+        socket.emit("join",user.getId());
+
+        setSocket(socket);
+
 
         Long tsLong = System.currentTimeMillis();
         String time = getRequiredTime(tsLong.toString());
@@ -96,9 +116,12 @@ public class ContactsActivity extends AppCompatActivity {
                 else
                     Global.receiverId = contact.getSender();
 
-                Intent i = new Intent(ContactsActivity.this,ChattingActivity.class);
+                getSupportFragmentManager().beginTransaction().add(R.id.frame_layout,new ChattingActivity()).commit();
+
+
+                /*Intent i = new Intent(ContactsActivity.this,ChattingActivity.class);
                 startActivity(i);
-                finish();
+                finish();*/
             }
 
             @Override

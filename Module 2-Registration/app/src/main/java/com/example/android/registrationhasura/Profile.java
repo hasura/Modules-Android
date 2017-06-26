@@ -14,14 +14,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.util.List;
-
 import io.hasura.sdk.Callback;
 import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
 import io.hasura.sdk.model.response.FileUploadResponse;
+import io.hasura.sdk.responseListener.FileDownloadResponseListener;
 import io.hasura.sdk.responseListener.FileUploadResponseListener;
 
 /**
@@ -61,7 +60,7 @@ public class Profile extends AppCompatActivity {
 
         if(Hasura.getClient().getUser() != null){
 
-            client.useDataService()
+            /*client.useDataService()
                     .setRequestBody(new SelectQuery(user.getId()))
                     .expectResponseTypeArrayOf(UserDetails.class)
                     .enqueue(new Callback<List<UserDetails>, HasuraException>() {
@@ -82,10 +81,10 @@ public class Profile extends AppCompatActivity {
                         public void onFailure(HasuraException e) {
                             Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
                         }
-                    });
-            if(update == 1) {
-                /*client.useFileStoreService()
-                        .downloadFile(fileId, new FileDownloadResponseListener() {
+                    });*/
+            //if(update == 1) {
+                client.useFileStoreService()
+                        .downloadFile("104_picture", new FileDownloadResponseListener() {
                             @Override
                             public void onDownloadComplete(byte[] bytes) {
                                 picture.setImageBitmap(Photo.getImage(bytes));
@@ -100,8 +99,8 @@ public class Profile extends AppCompatActivity {
                             public void onDownloading(float v) {
 
                             }
-                        });*/
-            }
+                        });
+            //}
         }
         picture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,7 +134,7 @@ public class Profile extends AppCompatActivity {
                         });
 
 
-                /*if(update == 0) {
+                if(update == 0) {
                     client.useDataService()
                             .setRequestBody(new InsertQuery(userDetails))
                             .expectResponseType(ResponseMessage.class)
@@ -165,7 +164,7 @@ public class Profile extends AppCompatActivity {
                                     Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
                                 }
                             });
-                }*/
+                }
             }
         });
 

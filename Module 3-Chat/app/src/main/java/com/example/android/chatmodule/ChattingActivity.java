@@ -2,14 +2,17 @@ package com.example.android.chatmodule;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -21,8 +24,12 @@ import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 
-public class ChattingActivity extends AppCompatActivity {
+public class ChattingActivity extends Fragment {
+
+    View parentViewHolder;
 
     EditText message;
     RecyclerView recyclerView;
@@ -37,8 +44,6 @@ public class ChattingActivity extends AppCompatActivity {
     String latestTime;
 
     boolean canFetch = true;
-
-    ProgressBar loadingProgress;
 
     boolean isLoading = false;
 
@@ -56,35 +61,67 @@ public class ChattingActivity extends AppCompatActivity {
     List<ChatMessage> allData;
     List<ChatMessage> displayData;
 
+    Socket socket;
+
     @Override
-    public void onBackPressed()
-    {
-        Intent i = new Intent(ChattingActivity.this,ContactsActivity.class);
+    public void onDetach(){
+        super.onDetach();
+        Intent i = new Intent(getActivity().getApplicationContext(),ContactsActivity.class);
         startActivity(i);
-        finish();
+        getActivity().finish();
     }
 
+    /*@Override
+    public void onBackPressed()
+    {
+        Intent i = new Intent(getActivity().getApplicationContext(),ContactsActivity.class);
+        startActivity(i);
+        getActivity().finish();
+    }*/
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chatting);
+    }
 
-        db = new DataBaseHandler(this,DATABASE_NAME,null,DATABASE_VERSION);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        parentViewHolder = inflater.inflate(R.layout.activity_chatting,container,false);
+        //socket.connect();
+        socket = getSocket();
 
-        message = (EditText) findViewById(R.id.chat_message);
-        recyclerView = (RecyclerView) findViewById(R.id.chat_recyclerview);
-        send = (Button) findViewById(R.id.chat_sendButton);
+        socket.on("sendMessage", new Emitter.Listener() {
+            @Override
+            public void call(final Object... args) {
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ChatMessage incomingMessage = new Gson().fromJson((String) args[0], ChatMessage.class);
 
-        loadingProgress = new ProgressBar(this);
+                        db.insertMessage(incomingMessage);
+                        if(incomingMessage.getReceiver() == Global.receiverId || incomingMessage.getSender() == Global.receiverId){
+                            adapter.addMessage(incomingMessage);
+                        }
+                    }
+                });
+            }
+        });
 
-        linearLayoutManager = new LinearLayoutManager(this);
+
+        db = new DataBaseHandler(getActivity().getApplicationContext(),DATABASE_NAME,null,DATABASE_VERSION);
+
+        message = (EditText) parentViewHolder.findViewById(R.id.chat_message);
+        recyclerView = (RecyclerView) parentViewHolder.findViewById(R.id.chat_recyclerview);
+        send = (Button) parentViewHolder.findViewById(R.id.chat_sendButton);
+
+        linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         linearLayoutManager.setReverseLayout(true);
         adapter = new ChatRecyclerViewAdapter();
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
         totalItemCount = linearLayoutManager.getItemCount();
-        setRecyclerViewScrollListener();
+        //setRecyclerViewScrollListener();
 
         receiverId = Global.receiverId;
         senderId = user.getId();
@@ -122,11 +159,12 @@ public class ChattingActivity extends AppCompatActivity {
                                 public void onSuccess(MessageResponse messageResponse) {
                                     adapter.addMessage(chat);
                                     db.insertMessage(chat);
+                                    socket.emit("chatMessage",new Gson().toJson(chat), Global.receiverId);
                                 }
 
                                 @Override
                                 public void onFailure(HasuraException e) {
-                                    Toast.makeText(ChattingActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
                                 }
                             });
                 }
@@ -134,7 +172,14 @@ public class ChattingActivity extends AppCompatActivity {
             }
         });
 
+        return parentViewHolder;
+    }
 
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        //socket.disconnect();
     }
     public String getRequiredTime(String timeStampStr){
         try{
@@ -146,7 +191,7 @@ public class ChattingActivity extends AppCompatActivity {
         }
     }
 
-    private void setRecyclerViewScrollListener() {
+    /*private void setRecyclerViewScrollListener() {
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -164,13 +209,11 @@ public class ChattingActivity extends AppCompatActivity {
                     if (total - 1 == lastVisibleItemCount)
                         if (dy < 0){
                             loadChats(displayedsize);
-                            loadingProgress.setVisibility(View.VISIBLE);
-                        }else
-                            loadingProgress.setVisibility(View.GONE);
+                        }
                 }
             }
         });
-    }
+    }*/
 
     private void loadChats(int start){
         if(totalItemCount > paginationNumber) {
@@ -206,5 +249,9 @@ public class ChattingActivity extends AppCompatActivity {
             adapter.setChatMessages(allData);
             displayedsize = displayedsize + totalItemCount;
         }
+    }
+
+    public Socket getSocket() {
+        return Global.socket;
     }
 }
