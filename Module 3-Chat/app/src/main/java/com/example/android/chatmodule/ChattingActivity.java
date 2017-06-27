@@ -116,11 +116,12 @@ public class ChattingActivity extends Fragment {
         send = (Button) parentViewHolder.findViewById(R.id.chat_sendButton);
 
         linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-        linearLayoutManager.setReverseLayout(true);
+        //linearLayoutManager.setReverseLayout(true);
         adapter = new ChatRecyclerViewAdapter();
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
         totalItemCount = linearLayoutManager.getItemCount();
+
         //setRecyclerViewScrollListener();
 
         receiverId = Global.receiverId;
@@ -132,6 +133,7 @@ public class ChattingActivity extends Fragment {
             if(allData.size() != 0)
                 loadChats(0);
 
+        recyclerView.scrollToPosition(adapter.getItemCount() - 1);
 
 
         send.setOnClickListener(new View.OnClickListener() {

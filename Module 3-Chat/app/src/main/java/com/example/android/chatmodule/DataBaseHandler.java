@@ -117,7 +117,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         String selectQuery = "SELECT CONTENTS, TIMESTAMP, SENDER_ID, RECEIVER_ID FROM " + TABLE_MESSAGE +
                 " WHERE ( ( sender_id = " + user.getId()  + " AND receiver_id = " + receiverId + ") OR" +
                 " ( sender_id = " + receiverId + " AND receiver_id = " + user.getId() +
-                " ) ) ORDER BY TIMESTAMP DESC ";
+                " ) ) ORDER BY TIMESTAMP ASC ";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery,null);

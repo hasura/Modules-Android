@@ -112,6 +112,16 @@ public class ContactsListAdapter extends RecyclerView.Adapter<ContactsListViewHo
         notifyDataSetChanged();
     }
 
+    public boolean checkForContact(int receiverId){
+        int i;
+        for(i = 0;i < contacts.size();i++){
+            if (receiverId == contacts.get(i).getReceiver() || receiverId == contacts.get(i).getSender()){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public String getRequiredTime(String timeStampStr){
         try{
             DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

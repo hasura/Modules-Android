@@ -2,10 +2,14 @@ package com.example.android.chatmodule;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.InputType;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.net.URISyntaxException;
@@ -31,6 +35,7 @@ public class ContactsActivity extends AppCompatActivity {
     ContactsListAdapter adapter;
     RecyclerView recyclerView;
     String latestTime;
+    FloatingActionButton floatingActionButton;
 
     private Socket socket;{
         try{
@@ -102,7 +107,7 @@ public class ContactsActivity extends AppCompatActivity {
 
 
 
-
+        floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
         recyclerView = (RecyclerView) findViewById(R.id.contacts_recyclerview);
 
 
@@ -134,6 +139,30 @@ public class ContactsActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         adapter.setContacts(db.getAllContacts());
+
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(ContactsActivity.this);
+                final EditText id = new EditText(ContactsActivity.this);
+                id.setInputType(InputType.TYPE_CLASS_NUMBER);
+                alert.setView(id);
+                alert.setMessage("Enter User-Id of new user");
+                alert.setPositiveButton("Send Message", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (adapter.checkForContact(getNumber(id.getText().toString()))) {
+                            Global.receiverId = getNumber(id.getText().toString());
+                            floatingActionButton.setVisibility(View.GONE);
+                            getSupportFragmentManager().beginTransaction().add(R.id.frame_layout, new ChattingActivity()).commit();
+                        }else
+                            Toast.makeText(ContactsActivity.this, "Chat with user already exists!!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                alert.show();
+            }
+        });
     }
 
     public void checkForDeleteContact(final int position, final ChatMessage contact){
@@ -159,5 +188,17 @@ public class ContactsActivity extends AppCompatActivity {
         } catch (Exception ignored) {
             return "xx";
         }
+    }
+
+    public int getNumber(String string){
+        char[] input = string.toCharArray();
+        int i;
+        int id = 0;
+        for (i = 0;i < input.length;i++){
+            id = id * 10;
+            id = id + (input[i] - '0');
+        }
+
+        return id;
     }
 }
