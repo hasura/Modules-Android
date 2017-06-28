@@ -63,6 +63,7 @@ public class ChattingActivity extends Fragment {
 
     Socket socket;
 
+
     @Override
     public void onDetach(){
         super.onDetach();
@@ -70,15 +71,6 @@ public class ChattingActivity extends Fragment {
         startActivity(i);
         getActivity().finish();
     }
-
-    /*@Override
-    public void onBackPressed()
-    {
-        Intent i = new Intent(getActivity().getApplicationContext(),ContactsActivity.class);
-        startActivity(i);
-        getActivity().finish();
-    }*/
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,7 +80,7 @@ public class ChattingActivity extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         parentViewHolder = inflater.inflate(R.layout.activity_chatting,container,false);
-        //socket.connect();
+
         socket = getSocket();
 
         socket.on("sendMessage", new Emitter.Listener() {
@@ -131,7 +123,8 @@ public class ChattingActivity extends Fragment {
         //latestTime = allData.get(paginationNumber-1).getTime();
         totalItemCount = allData.size();
             if(allData.size() != 0)
-                loadChats(0);
+                //loadChats(0);
+                adapter.setChatMessages(allData);
 
         recyclerView.scrollToPosition(adapter.getItemCount() - 1);
 

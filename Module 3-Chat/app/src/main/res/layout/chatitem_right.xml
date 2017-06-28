@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/chatItem_right_text"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:padding="7dp"/>
 
         <TextView

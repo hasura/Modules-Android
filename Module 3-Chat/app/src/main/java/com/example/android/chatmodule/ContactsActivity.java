@@ -92,21 +92,6 @@ public class ContactsActivity extends AppCompatActivity {
                     }
                 });
 
-        /*List<ChatMessage> sampleData = new ArrayList<>();
-        sampleData.add(new ChatMessage("hello there",time,user.getId(),3,user.getId()));
-        sampleData.add(new ChatMessage("Hey to different!!",time,3,user.getId(),user.getId()));
-        sampleData.add(new ChatMessage("Hey!!",time,user.getId(),2,user.getId()));
-        sampleData.add(new ChatMessage("this is some random text!!",time,user.getId(),4,user.getId()));
-        sampleData.add(new ChatMessage("Hello World!!",time,3,user.getId(),user.getId()));
-
-        db.insertMessage(sampleData.get(0));
-        db.insertMessage(sampleData.get(1));
-        db.insertMessage(sampleData.get(2));
-        db.insertMessage(sampleData.get(3));
-        db.insertMessage(sampleData.get(4));*/
-
-
-
         floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
         recyclerView = (RecyclerView) findViewById(R.id.contacts_recyclerview);
 
@@ -121,12 +106,8 @@ public class ContactsActivity extends AppCompatActivity {
                 else
                     Global.receiverId = contact.getSender();
 
+                floatingActionButton.setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().add(R.id.frame_layout,new ChattingActivity()).commit();
-
-
-                /*Intent i = new Intent(ContactsActivity.this,ChattingActivity.class);
-                startActivity(i);
-                finish();*/
             }
 
             @Override
