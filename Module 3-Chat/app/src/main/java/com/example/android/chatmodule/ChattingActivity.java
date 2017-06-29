@@ -1,6 +1,5 @@
 package com.example.android.chatmodule;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -64,13 +63,13 @@ public class ChattingActivity extends Fragment {
     Socket socket;
 
 
-    @Override
+    /*@Override
     public void onDetach(){
         super.onDetach();
         Intent i = new Intent(getActivity().getApplicationContext(),ContactsActivity.class);
         startActivity(i);
         getActivity().finish();
-    }
+    }*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

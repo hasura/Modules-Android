@@ -56,6 +56,17 @@ public class ContactsActivity extends AppCompatActivity {
     private static final int DATABASE_VERSION = 2;
 
     @Override
+    public void onBackPressed() {
+        int count = getFragmentManager().getBackStackEntryCount();
+
+        if (count == 0) {
+            super.onBackPressed();
+        } else {
+            getFragmentManager().popBackStack();
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contacts_activity);
@@ -107,7 +118,7 @@ public class ContactsActivity extends AppCompatActivity {
                     Global.receiverId = contact.getSender();
 
                 floatingActionButton.setVisibility(View.GONE);
-                getSupportFragmentManager().beginTransaction().add(R.id.frame_layout,new ChattingActivity()).commit();
+                getSupportFragmentManager().beginTransaction().add(R.id.frame_layout,new ChattingActivity()).addToBackStack(null).commit();
             }
 
             @Override

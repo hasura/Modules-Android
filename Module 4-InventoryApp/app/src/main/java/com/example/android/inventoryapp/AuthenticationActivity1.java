@@ -1,4 +1,4 @@
-package com.example.android.chatmodule;
+package com.example.android.inventoryapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,7 +40,7 @@ public class AuthenticationActivity1 extends AppCompatActivity {
 
 
         if(Hasura.getClient().getUser().getAuthToken() != null){
-            Intent i = new Intent(AuthenticationActivity1.this,ContactsActivity.class);
+            Intent i = new Intent(AuthenticationActivity1.this,ProductsActivity.class);
             startActivity(i);
             finish();
         }
