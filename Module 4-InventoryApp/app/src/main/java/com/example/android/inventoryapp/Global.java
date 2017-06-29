@@ -8,5 +8,6 @@ import java.util.List;
 
 public class Global {
     static ItemModel currentItem;
+
     static List<ItemModel> currentItemList;
 }

@@ -90,27 +90,6 @@ public class ViewAllItems extends Fragment{
                              }
                          });
 
-        /*recyclerView = (RecyclerView) parentViewHolder.findViewById(R.id.view_all_recyclerview);
-
-        linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-        adapter = new ItemListAdapter(new ItemListAdapter.Interactor() {
-            @Override
-            public void onItemClicked(int position, ItemModel item) {
-                Global.currentItem = item;
-                Intent i = new Intent(getActivity().getApplicationContext(),ShowProduct.class);
-                startActivity(i);
-            }
-        });
-
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(adapter);
-
-        //Toast.makeText(ViewAllItems.this,Global.currentItemList.size()+"", Toast.LENGTH_LONG).show();
-        int i;
-        for(i = 0;i<Global.currentItemList.size();i++)
-            adapter.addItem(Global.currentItemList.get(i));
-        //adapter.setItemList(Global.currentItemList);*/
-
         return parentViewHolder;
     }
 }

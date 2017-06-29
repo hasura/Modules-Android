@@ -25,8 +25,6 @@ public class ItemModel {
     @SerializedName("file_id")
     String fileId;
 
-    //Add comments later.
-
     public void setName(String name){
         this.name = name;
     }
@@ -79,13 +77,3 @@ public class ItemModel {
 
     }
 }
-
-/*
-what should my model have:
-image
-name
-price
-description
-category
-reviews/comments
-*/
