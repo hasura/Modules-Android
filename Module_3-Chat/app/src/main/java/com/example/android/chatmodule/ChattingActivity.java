@@ -145,7 +145,7 @@ public class ChattingActivity extends Fragment {
                                 public void onSuccess(MessageResponse messageResponse) {
                                     adapter.addMessage(chat);
                                     db.insertMessage(chat);
-                                    socket.emit("chatMessage",new Gson().toJson(chat), Global.receiverId);
+                                    socket.emit("chatMessage",new Gson().toJson(chat), 104/*Global.receiverId*/);
                                 }
 
                                 @Override

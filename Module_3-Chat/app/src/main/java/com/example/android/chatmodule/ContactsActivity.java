@@ -12,8 +12,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -27,7 +25,6 @@ import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
 import io.socket.client.IO;
 import io.socket.client.Socket;
-import io.socket.emitter.Emitter;
 
 /**
  * Created by amogh on 29/5/17.
@@ -81,7 +78,7 @@ public class ContactsActivity extends AppCompatActivity {
 
         setSocket(socket);
 
-        socket.on("sendMessage", new Emitter.Listener() {
+        /*socket.on("sendMessage", new Emitter.Listener() {
             @Override
             public void call(final Object... args) {
                 runOnUiThread(new Runnable() {
@@ -93,7 +90,7 @@ public class ContactsActivity extends AppCompatActivity {
                     }
                 });
             }
-        });
+        });*/
 
 
         Long tsLong = System.currentTimeMillis();
