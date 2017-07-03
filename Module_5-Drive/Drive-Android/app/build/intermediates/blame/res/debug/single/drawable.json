@@ -1,0 +1,170 @@
+[
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/button_primary.xml",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable/button_primary.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
+        "source": "/Users/jaison/.android/build-cache/faf1c0d3335dbd34f931cb118b15ddb06844907e/output/res/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/background_splash.xml",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable/background_splash.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
+        "source": "/Users/jaison/.android/build-cache/faf1c0d3335dbd34f931cb118b15ddb06844907e/output/res/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
+        "source": "/Users/jaison/.android/build-cache/faf1c0d3335dbd34f931cb118b15ddb06844907e/output/res/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/button_transparent.xml",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable/button_transparent.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/drawable/abc_item_background_holo_dark.xml"
+    }
+]

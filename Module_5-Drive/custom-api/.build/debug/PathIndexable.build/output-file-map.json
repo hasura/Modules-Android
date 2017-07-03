@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/PathIndexable-1.0.0/Sources/PathIndexable/PathIndexable+Subscripting.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.build/PathIndexable+Subscripting.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.build/PathIndexable+Subscripting.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.build/PathIndexable+Subscripting~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.build/PathIndexable+Subscripting.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/PathIndexable-1.0.0/Sources/PathIndexable/PathIndexable.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.build/PathIndexable.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.build/PathIndexable.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.build/PathIndexable~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.build/PathIndexable.swiftdeps"
+  }
+}

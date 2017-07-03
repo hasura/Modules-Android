@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

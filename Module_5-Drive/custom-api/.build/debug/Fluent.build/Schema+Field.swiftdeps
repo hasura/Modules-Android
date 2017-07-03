@@ -1,0 +1,80 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "VO6Fluent6Schema5Field"
+- "OVO6Fluent6Schema5Field8DataType"
+provides-member:
+- ["O6Fluent6Schema", ""]
+- ["VO6Fluent6Schema5Field", ""]
+- ["OVO6Fluent6Schema5Field8DataType", ""]
+- ["O6Fluent6Schema", "Field"]
+provides-dynamic-lookup:
+depends-top-level:
+- "Schema"
+- "Bool"
+- "NodeRepresentable"
+- "Int"
+- "Node"
+- "BooleanLiteralType"
+- "String"
+- "AssignmentPrecedence"
+depends-member:
+- ["Sb", "deinit"]
+- ["OVO6Fluent6Schema5Field8DataType", "Int"]
+- ["OVO6Fluent6Schema5Field8DataType", "String"]
+- ["OVO6Fluent6Schema5Field8DataType", "bool"]
+- ["OVO6Fluent6Schema5Field8DataType", "custom"]
+- ["OVO6Fluent6Schema5Field8DataType", "data"]
+- ["OVO6Fluent6Schema5Field8DataType", "deinit"]
+- ["OVO6Fluent6Schema5Field8DataType", "double"]
+- ["OVO6Fluent6Schema5Field8DataType", "id"]
+- ["OVO6Fluent6Schema5Field8DataType", "int"]
+- ["OVO6Fluent6Schema5Field8DataType", "string"]
+- ["VO6Fluent6Schema5Field", "Bool"]
+- ["VO6Fluent6Schema5Field", "DataType"]
+- ["VO6Fluent6Schema5Field", "Int"]
+- ["VO6Fluent6Schema5Field", "Node"]
+- ["VO6Fluent6Schema5Field", "NodeRepresentable"]
+- ["VO6Fluent6Schema5Field", "String"]
+- ["VO6Fluent6Schema5Field", "default"]
+- ["VO6Fluent6Schema5Field", "deinit"]
+- ["VO6Fluent6Schema5Field", "init"]
+- ["VO6Fluent6Schema5Field", "name"]
+- ["VO6Fluent6Schema5Field", "optional"]
+- ["VO6Fluent6Schema5Field", "type"]
+- ["VO6Fluent6Schema5Field", "unique"]
+- ["O4Node4Node", "deinit"]
+- ["P4Node17NodeRepresentable", "deinit"]
+- !private ["P4Node17NodeRepresentable", "makeNode"]
+- ["Sq", "deinit"]
+- ["O6Fluent6Schema", "Bool"]
+- ["O6Fluent6Schema", "Field"]
+- ["O6Fluent6Schema", "Int"]
+- ["O6Fluent6Schema", "Node"]
+- ["O6Fluent6Schema", "NodeRepresentable"]
+- ["O6Fluent6Schema", "String"]
+- ["SS", "deinit"]
+depends-nominal:
+- "Sb"
+- "OVO6Fluent6Schema5Field8DataType"
+- "VO6Fluent6Schema5Field"
+- "O4Node4Node"
+- "P4Node17NodeRepresentable"
+- "Sq"
+- "O6Fluent6Schema"
+- "SS"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/CLibreSSL.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/Node.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/PathIndexable.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/Polymorphic.swiftmodule"
+interface-hash: "01302aab2d36412cfc7cbf1ac59b6b70"

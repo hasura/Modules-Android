@@ -1,0 +1,12 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "142495aa4285cf3181780e2c23142a30"
+build_time: [544860530, 128304000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Atom.swift": [544860379, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Compound.swift": [544860379, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Student.swift": [544860379, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester+InsertAndFind.swift": [544860379, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester+PivotsAndRelations.swift": [544860379, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester+Schema.swift": [544860379, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester+Utilities.swift": [544860379, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester.swift": [544860379, 0]

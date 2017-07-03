@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
+        "source": "/Users/jaison/.android/build-cache/faf1c0d3335dbd34f931cb118b15ddb06844907e/output/res/anim/design_fab_in.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/jaison/.android/build-cache/faf1c0d3335dbd34f931cb118b15ddb06844907e/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
+        "source": "/Users/jaison/.android/build-cache/faf1c0d3335dbd34f931cb118b15ddb06844907e/output/res/anim/design_fab_out.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/jaison/.android/build-cache/faf1c0d3335dbd34f931cb118b15ddb06844907e/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/anim/abc_slide_out_bottom.xml"
+    }
+]

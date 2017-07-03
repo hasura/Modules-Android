@@ -1,0 +1,29 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/Random/CryptoRandom.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/CryptoRandom.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/CryptoRandom.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/CryptoRandom~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/CryptoRandom.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/Random/Random+Deprecated.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/Random+Deprecated.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/Random+Deprecated.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/Random+Deprecated~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/Random+Deprecated.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/Random/Random.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/Random.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/Random.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/Random~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/Random.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/Random/URandom.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/URandom.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/URandom.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/URandom~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Random.build/URandom.swiftdeps"
+  }
+}

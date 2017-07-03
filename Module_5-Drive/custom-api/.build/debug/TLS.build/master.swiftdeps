@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "20a2b30da60274c3a33a35191bc3d609"
+build_time: [544860522, 722156000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/TLS-1.1.2/Sources/TLS/Certificates.swift": [544860415, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/TLS-1.1.2/Sources/TLS/Config.swift": [544860415, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/TLS-1.1.2/Sources/TLS/Context.swift": [544860415, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/TLS-1.1.2/Sources/TLS/Error.swift": [544860415, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/TLS-1.1.2/Sources/TLS/Mode.swift": [544860412, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/TLS-1.1.2/Sources/TLS/Socket.swift": [544860415, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/TLS-1.1.2/Sources/TLS/Utilities.swift": [544860415, 0]

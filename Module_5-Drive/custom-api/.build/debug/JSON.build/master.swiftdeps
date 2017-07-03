@@ -1,0 +1,13 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "7a3723f23d2a3b8ab97c263e09c37dbe"
+build_time: [544860522, 722136000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/JSON-1.0.6/Sources/JSON/File.swift": [544860435, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/JSON-1.0.6/Sources/JSON/JSON+Bytes.swift": [544860429, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/JSON-1.0.6/Sources/JSON/JSON+Equatable.swift": [544860435, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/JSON-1.0.6/Sources/JSON/JSON+Node.swift": [544860435, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/JSON-1.0.6/Sources/JSON/JSON+Parse.swift": [544860435, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/JSON-1.0.6/Sources/JSON/JSON+Serialize.swift": [544860435, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/JSON-1.0.6/Sources/JSON/JSON.swift": [544860435, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/JSON-1.0.6/Sources/JSON/JSONRepresentable.swift": [544860435, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/JSON-1.0.6/Sources/JSON/Sequence+Convertible.swift": [544860429, 0]

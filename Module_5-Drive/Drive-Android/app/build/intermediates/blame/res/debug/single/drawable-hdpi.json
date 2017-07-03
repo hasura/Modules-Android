@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/safe.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/safe.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_info.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_info.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/page_control.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/page_control.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_photo.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_photo.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_insert_photo_white.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_insert_photo_white.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_overflow_black.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_overflow_black.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/cloud.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/cloud.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/empty.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/empty.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_view_grid.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_view_grid.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_insert_photo.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_insert_photo.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/error.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/error.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_info.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_info.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_add.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_add.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_close.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_close.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_camera.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_camera.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_view_list.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_view_list.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_delete.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_delete.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_edit.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_edit.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_folder.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_folder.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/carry_around.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/drawable-hdpi/carry_around.png"
+    }
+]

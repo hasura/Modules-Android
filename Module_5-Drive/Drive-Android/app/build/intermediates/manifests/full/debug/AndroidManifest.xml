@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.hasura.drive_android"
+    android:versionCode="2"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
+
+    <application
+        android:name="io.hasura.drive_android.DriveApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme.Light.NoActionBar" >
+        <activity
+            android:name="io.hasura.drive_android.ui.launcher.LauncherActivity"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.hasura.drive_android.ui.authentication.AuthenticationActivity"
+            android:label="@string/Authentication_Activity_Title"
+            android:theme="@style/AuthenticationActivityTheme" />
+        <activity
+            android:name="io.hasura.drive_android.ui.home.HomeActivity"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name="io.hasura.drive_android.ui.fileDetail.FileDetailActivity"
+            android:theme="@style/FileDetailActivityTheme" />
+        <activity
+            android:name="io.hasura.drive_android.ui.editFile.EditFileActivity"
+            android:label="Edit File" />
+        <activity
+            android:name="io.hasura.drive_android.ui.folderList.FolderListActivity"
+            android:label="@string/title_activity_home" />
+
+        <receiver android:name="io.hasura.drive_android.utils.SmsReceiver" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

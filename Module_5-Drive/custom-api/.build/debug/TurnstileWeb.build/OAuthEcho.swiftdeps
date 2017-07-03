@@ -1,0 +1,49 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "OAuthEcho"
+provides-nominal:
+- "C12TurnstileWeb9OAuthEcho"
+provides-member:
+- ["C12TurnstileWeb9OAuthEcho", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Credentials"
+- "AssignmentPrecedence"
+- "OAuthParameters"
+- "URL"
+- "OAuthEcho"
+depends-member:
+- !private ["Ps9AnyObject", "authServiceProvider"]
+- !private ["Ps9AnyObject", "oauthParameters"]
+- ["Ps9AnyObject", ""]
+- !private ["P9Turnstile11Credentials", "authServiceProvider"]
+- !private ["P9Turnstile11Credentials", "oauthParameters"]
+- ["P9Turnstile11Credentials", ""]
+- ["C12TurnstileWeb9OAuthEcho", "OAuthParameters"]
+- ["C12TurnstileWeb9OAuthEcho", "URL"]
+- ["C12TurnstileWeb9OAuthEcho", "authServiceProvider"]
+- ["C12TurnstileWeb9OAuthEcho", "deinit"]
+- ["C12TurnstileWeb9OAuthEcho", "init"]
+- ["C12TurnstileWeb9OAuthEcho", "oauthParameters"]
+- ["C12TurnstileWeb15OAuthParameters", "deinit"]
+- ["V10Foundation3URL", "deinit"]
+depends-nominal:
+- "Ps9AnyObject"
+- "P9Turnstile11Credentials"
+- "C12TurnstileWeb9OAuthEcho"
+- "C12TurnstileWeb15OAuthParameters"
+- "V10Foundation3URL"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/CLibreSSL.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/Turnstile.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileCrypto.swiftmodule"
+interface-hash: "d96fbc865341a5ee6a9fab1844f28867"

@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/custom_api.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Sources/main.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/custom_api.build/main.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/custom_api.build/main.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/custom_api.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/custom_api.build/main.swiftdeps"
+  }
+}

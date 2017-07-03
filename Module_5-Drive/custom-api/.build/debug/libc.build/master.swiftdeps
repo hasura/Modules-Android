@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "3af9f0d10641a5636696322e223ffcd7"
+build_time: [544860502, 702316000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Core-1.1.1/Sources/libc/libc.swift": [544860327, 0]

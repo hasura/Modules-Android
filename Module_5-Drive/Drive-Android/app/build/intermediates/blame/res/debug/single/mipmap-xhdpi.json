@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher_round.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/menu/file_detail.xml",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/menu/file_detail.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/menu/home.xml",
+        "source": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/src/main/res/menu/home.xml"
+    }
+]

@@ -1,0 +1,18 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "766f291dc8a2f6148726e39d8df7d804"
+build_time: [544860558, 295500000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/AuthError.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/AuthMiddleware.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/CacheSessionManager.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/ProtectMiddleware.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/Request+Subject.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/Authenticator/Authenticator.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/Authenticator/Realm.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/Authenticator/User+Authenticator.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/Credentials/Identifier.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/Header/Authorization.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/Header/Basic.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/Header/Bearer.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/Header/Request+Authorization.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Auth/Authentication/User/User.swift": [544860320, 0]

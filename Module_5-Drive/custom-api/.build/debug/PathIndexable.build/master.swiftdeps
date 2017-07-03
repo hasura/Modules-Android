@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "d9be5b7828d261340ca7142720d17ef6"
+build_time: [544860502, 702807000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/PathIndexable-1.0.0/Sources/PathIndexable/PathIndexable+Subscripting.swift": [544860392, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/PathIndexable-1.0.0/Sources/PathIndexable/PathIndexable.swift": [544860392, 0]

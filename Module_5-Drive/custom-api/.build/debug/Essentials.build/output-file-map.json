@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Essentials.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/Essentials/ByteStream.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Essentials.build/ByteStream.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Essentials.build/ByteStream.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Essentials.build/ByteStream~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Essentials.build/ByteStream.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/Essentials/Helpers.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Essentials.build/Helpers.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Essentials.build/Helpers.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Essentials.build/Helpers~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Essentials.build/Helpers.swiftdeps"
+  }
+}

@@ -1,0 +1,16 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "c1997cb6ea86bc283cbdabecb5278cf7"
+build_time: [544860532, 682703000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/URLSession+Turnstile.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/WebMemoryRealm.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/LoginProviders/Digits.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/LoginProviders/Facebook.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/LoginProviders/Google.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth/OAuthDelegator.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth/OAuthEcho.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth/OAuthParameters.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth2/AuthorizationCode.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth2/OAuth2.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth2/OAuth2Error.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth2/OAuth2Token.swift": [544860444, 0]

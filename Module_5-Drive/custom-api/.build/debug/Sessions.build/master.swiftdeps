@@ -1,0 +1,10 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "c6d2eae255a521f60544ebc9b6718b9b"
+build_time: [544860558, 295500000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Sessions/CacheSessions.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Sessions/MemorySessions.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Sessions/Request+Session.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Sessions/Session.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Sessions/SessionsMiddleware.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Sessions/SessionsProtocol.swift": [544860320, 0]

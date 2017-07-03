@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/jaison/Documents/Hasura/mobileapps/android/Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/jaison/.android/build-cache/2bb57306edb5c3630b574f35d639fcedec109287/output/res/layout-v21/notification_template_custom_big.xml"
+    }
+]

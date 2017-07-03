@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Cache/CacheProtocol.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/CacheProtocol.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/CacheProtocol.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/CacheProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/CacheProtocol.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Cache/FluentCache.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/FluentCache.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/FluentCache.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/FluentCache~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/FluentCache.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Cache/MemoryCache.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/MemoryCache.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/MemoryCache.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/MemoryCache~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Cache.build/MemoryCache.swiftdeps"
+  }
+}

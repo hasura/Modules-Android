@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "9223cce1e08788c0c705f919b0ab8548"
+build_time: [544860509, 692534000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/Socks.swift": [544860421, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/SynchronousTCPServer.swift": [544860421, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/SynchronousUDPServer.swift": [544860421, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/TCPClient.swift": [544860421, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/UDPClient.swift": [544860421, 0]
