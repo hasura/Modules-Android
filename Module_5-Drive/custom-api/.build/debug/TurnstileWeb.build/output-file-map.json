@@ -1,0 +1,77 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/URLSession+Turnstile.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/URLSession+Turnstile.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/URLSession+Turnstile.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/URLSession+Turnstile~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/URLSession+Turnstile.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/WebMemoryRealm.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/WebMemoryRealm.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/WebMemoryRealm.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/WebMemoryRealm~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/WebMemoryRealm.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/LoginProviders/Digits.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Digits.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/LoginProviders/Digits.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Digits~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Digits.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/LoginProviders/Facebook.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Facebook.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/LoginProviders/Facebook.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Facebook~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Facebook.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/LoginProviders/Google.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Google.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/LoginProviders/Google.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Google~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Google.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth/OAuthDelegator.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuthDelegator.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Protocols/OAuth/OAuthDelegator.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuthDelegator~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuthDelegator.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth/OAuthEcho.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuthEcho.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Protocols/OAuth/OAuthEcho.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuthEcho~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuthEcho.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth/OAuthParameters.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuthParameters.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Protocols/OAuth/OAuthParameters.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuthParameters~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuthParameters.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth2/AuthorizationCode.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/AuthorizationCode.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Protocols/OAuth2/AuthorizationCode.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/AuthorizationCode~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/AuthorizationCode.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth2/OAuth2.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuth2.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Protocols/OAuth2/OAuth2.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuth2~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuth2.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth2/OAuth2Error.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuth2Error.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Protocols/OAuth2/OAuth2Error.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuth2Error~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuth2Error.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileWeb/Protocols/OAuth2/OAuth2Token.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuth2Token.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/Protocols/OAuth2/OAuth2Token.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuth2Token~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileWeb.build/OAuth2Token.swiftdeps"
+  }
+}

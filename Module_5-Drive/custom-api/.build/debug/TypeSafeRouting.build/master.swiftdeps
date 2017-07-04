@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "4822ca3274039e30aafad9d45cb6ba58"
+build_time: [544860553, 365905000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/TypeSafeRouting/Generated.swift": [544860469, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/TypeSafeRouting/StringInitializable.swift": [544860469, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/TypeSafeRouting/TypeSafeRoutingError.swift": [544860469, 0]

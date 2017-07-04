@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "3ef83af3f99964cab43f3c312b782653"
+build_time: [544860502, 702405000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileCrypto/BCrypt.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileCrypto/Random.swift": [544860444, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Turnstile-1.0.6/Sources/TurnstileCrypto/URandom.swift": [544860444, 0]

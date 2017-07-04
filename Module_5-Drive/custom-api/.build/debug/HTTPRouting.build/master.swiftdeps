@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "4941d99298362bd1e0476a6b23e1c2f3"
+build_time: [544860552, 767143000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/HTTPRouting/Request+Routing.swift": [544860469, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/HTTPRouting/RouteBuilder+HTTP.swift": [544860469, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/HTTPRouting/Router+HTTP.swift": [544860469, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/HTTPRouting/Routing+HTTP.swift": [544860469, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/HTTPRouting/Utilities.swift": [544860469, 0]

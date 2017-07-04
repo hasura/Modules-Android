@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/color-v23/design_tint_password_toggle.xml"
+    }
+]

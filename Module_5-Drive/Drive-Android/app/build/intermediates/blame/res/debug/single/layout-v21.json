@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout-v21/notification_action_tombstone.xml"
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_info.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_info.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_camera.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_camera.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_view_grid.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_view_grid.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/cloud.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/cloud.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_view_list.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_view_list.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/error.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/error.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_overflow_black.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_overflow_black.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_add.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_add.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_edit.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_edit.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/safe.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/safe.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_folder.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_folder.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_info.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_info.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_delete.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_delete.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_insert_photo.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_insert_photo.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_photo.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_action_photo.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/page_control.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/page_control.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_insert_photo_white.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_insert_photo_white.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/empty.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/empty.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_close.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/ic_close.png"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/drawable-hdpi/carry_around.png",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/drawable-hdpi/carry_around.png"
+    }
+]

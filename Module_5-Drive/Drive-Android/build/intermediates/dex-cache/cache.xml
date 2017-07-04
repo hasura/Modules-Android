@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_28f7b2f940af898ba476b06237bc64aff2221d07/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amogh/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.8.0_0d15f85aabfad293d1694920810bb96633f08005/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amogh/.android/build-cache/7defba1f742f09f582e303bc2031b8abdaba89b2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67ca310f81144005ff50082e6a0685ef24f6bf62">
+        <dex dex="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_aa742708ffd917a008dbfe97ce5d1be5cc73595c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amogh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.8.0/265257b82f20bb0371a926cc8ceb5f7bb17c0df8/okhttp-urlconnection-3.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="265257b82f20bb0371a926cc8ceb5f7bb17c0df8">
+        <dex dex="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-urlconnection-3.8.0_5d453ff567ce37c5d5ef536b873828908016b614/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amogh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.8.0/5a11f020cce2d11eb71ba916700600e18c4547e7/okhttp-3.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5a11f020cce2d11eb71ba916700600e18c4547e7">
+        <dex dex="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.8.0_c4ca83910859443c4b8b29d9b9c1f56542decea0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amogh/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.13.0_c20aeca2294f2f326936f3a066d9255b020bcd4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="df9c3485de10ddea7066398047e2da9501a8e148">
+        <dex dex="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c6a91127d24f228008bcc60cb2e4ba5357dae2d5/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MyDrive</string>
+    <string name="hint_mobile_number">Enter your mobile number</string>
+    <string name="hint_otp">Enter the OTP</string>
+    <string name="mobile_number_error_text">Please enter a valid mobile number</string>
+    <string name="otp_error_text">Please enter the OTP you received</string>
+    <string name="file_fetch_failed">Something went wrong</string>
+
+    <string name="hint_file_name">Filename</string>
+    <string name="hint_number">Number</string>
+    <string name="hint_expiry">Expiry</string>
+
+    <string name="cancel_button_text">Cancel</string>
+    <string name="update_button_text">Update</string>
+    <string name="next_button_text">Next</string>
+    <string name="signin_button_text">SIGN IN</string>
+    <string name="done_button_text">DONE</string>
+
+    <string name="retry_button_text">Retry</string>
+    <string name="submit_button_text">Submit</string>
+    <string name="please_wait">Please wait</string>
+    <string name="resend_otp_button_text">Resend Otp</string>
+
+    <string name="Authentication_Activity_Title">Sign In</string>
+    <string name="title_activity_home">My Documents</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="toggle_view">Toggle View</string>
+    <string name="info">Info</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

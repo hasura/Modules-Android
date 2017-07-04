@@ -1,0 +1,88 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "OAuthDelegator"
+provides-nominal:
+- "C12TurnstileWeb14OAuthDelegator"
+provides-member:
+- ["C12TurnstileWeb14OAuthDelegator", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "URLSessionConfiguration"
+- "HTTPClient"
+- "OAuthDelegator"
+- "AssignmentPrecedence"
+- "HTTPClientGenerator"
+- "String"
+- "URLSession"
+depends-member:
+- ["Ps9AnyObject", "URLSession"]
+- ["Ps9AnyObject", "URLSessionConfiguration"]
+- !private ["Ps9AnyObject", "_urlSession"]
+- !private ["Ps9AnyObject", "consumerKey"]
+- ["Ps9AnyObject", "default"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", ""]
+- ["Ps7CVarArg", "default"]
+- ["Ps7CVarArg", "init"]
+- ["Ps28CustomDebugStringConvertible", "default"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "default"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps9Equatable", "default"]
+- ["Ps9Equatable", "init"]
+- ["P12TurnstileWeb10HTTPClient", "deinit"]
+- ["P12TurnstileWeb10HTTPClient", "init"]
+- ["Ps8Hashable", "default"]
+- ["Ps8Hashable", "init"]
+- ["PSo9NSCopying", "default"]
+- ["CSo8NSObject", "default"]
+- ["CSo8NSObject", "init"]
+- ["PSo16NSObjectProtocol", "default"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["C12TurnstileWeb14OAuthDelegator", "HTTPClient"]
+- ["C12TurnstileWeb14OAuthDelegator", "HTTPClientGenerator"]
+- ["C12TurnstileWeb14OAuthDelegator", "String"]
+- ["C12TurnstileWeb14OAuthDelegator", "URLSession"]
+- ["C12TurnstileWeb14OAuthDelegator", "URLSessionConfiguration"]
+- ["C12TurnstileWeb14OAuthDelegator", "_urlSession"]
+- ["C12TurnstileWeb14OAuthDelegator", "consumerKey"]
+- ["C12TurnstileWeb14OAuthDelegator", "deinit"]
+- ["C12TurnstileWeb14OAuthDelegator", "init"]
+- ["C12TurnstileWeb14OAuthDelegator", "urlSession"]
+- ["SS", "deinit"]
+- ["CSo10URLSession", "deinit"]
+- ["CSo10URLSession", "init"]
+- ["CSo23URLSessionConfiguration", "default"]
+- ["CSo23URLSessionConfiguration", "deinit"]
+- ["Ps9_Hashable", "default"]
+- ["Ps9_Hashable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps7CVarArg"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "P12TurnstileWeb10HTTPClient"
+- "Ps8Hashable"
+- "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "C12TurnstileWeb14OAuthDelegator"
+- "SS"
+- "CSo10URLSession"
+- "CSo23URLSessionConfiguration"
+- "Ps9_Hashable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/CLibreSSL.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/Turnstile.swiftmodule"
+- "/Users/jaison/Documents/Drive/custom-api/.build/debug/TurnstileCrypto.swiftmodule"
+interface-hash: "6ce093b6f7f1bce1d9db398261a49b02"

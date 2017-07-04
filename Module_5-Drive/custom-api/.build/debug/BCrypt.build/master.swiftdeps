@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "e210e02abe02a426be71a3d36282b8cb"
+build_time: [544860534, 289576000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/BCrypt/BCrypt+Deprecated.swift": [544860325, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/BCrypt/BCrypt.swift": [544860325, 0]

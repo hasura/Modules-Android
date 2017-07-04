@@ -1,0 +1,71 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/Branch.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Branch.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Branch.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Branch~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Branch.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/ParametersContainer.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/ParametersContainer.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/ParametersContainer.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/ParametersContainer~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/ParametersContainer.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/RouteBuilder+RouteCollection.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder+RouteCollection.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder+RouteCollection.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder+RouteCollection~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder+RouteCollection.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/RouteBuilder+RouteGroup.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder+RouteGroup.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder+RouteGroup.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder+RouteGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder+RouteGroup.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/RouteBuilder.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteBuilder.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/RouteCollection.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteCollection.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteCollection.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteCollection~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteCollection.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/RouteGroup+RouteBuilder.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteGroup+RouteBuilder.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteGroup+RouteBuilder.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteGroup+RouteBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteGroup+RouteBuilder.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/RouteGroup.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteGroup.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteGroup.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/RouteGroup.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/Router+Routes.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Router+Routes.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Router+Routes.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Router+Routes~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Router+Routes.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/Router.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Router.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Router.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Router~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/Router.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Routing-1.1.0/Sources/Routing/SubBranchMap.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/SubBranchMap.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/SubBranchMap.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/SubBranchMap~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Routing.build/SubBranchMap.swiftdeps"
+  }
+}

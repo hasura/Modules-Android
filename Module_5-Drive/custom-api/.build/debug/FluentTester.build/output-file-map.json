@@ -1,0 +1,53 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Atom.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Atom.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Atom.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Atom~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Atom.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Compound.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Compound.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Compound.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Compound~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Compound.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Student.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Student.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Student.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Student~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Student.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester+InsertAndFind.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+InsertAndFind.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+InsertAndFind.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+InsertAndFind~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+InsertAndFind.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester+PivotsAndRelations.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+PivotsAndRelations.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+PivotsAndRelations.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+PivotsAndRelations~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+PivotsAndRelations.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester+Schema.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+Schema.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+Schema.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+Schema~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+Schema.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester+Utilities.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+Utilities.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+Utilities.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+Utilities~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester+Utilities.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Fluent-1.4.3/Sources/FluentTester/Tester.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/FluentTester.build/Tester.swiftdeps"
+  }
+}

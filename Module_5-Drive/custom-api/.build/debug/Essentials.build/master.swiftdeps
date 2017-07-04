@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "c10b058867c4b412e605d3cbdf614d42"
+build_time: [544860522, 722135000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/Essentials/ByteStream.swift": [544860325, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/Essentials/Helpers.swift": [544860325, 0]

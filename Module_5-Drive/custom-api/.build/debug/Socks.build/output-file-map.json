@@ -1,0 +1,35 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/Socks.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/Socks.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/Socks.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/Socks~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/Socks.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/SynchronousTCPServer.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/SynchronousTCPServer.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/SynchronousTCPServer.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/SynchronousTCPServer~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/SynchronousTCPServer.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/SynchronousUDPServer.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/SynchronousUDPServer.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/SynchronousUDPServer.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/SynchronousUDPServer~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/SynchronousUDPServer.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/TCPClient.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/TCPClient.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/TCPClient.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/TCPClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/TCPClient.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Socks-1.2.7/Sources/Socks/UDPClient.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/UDPClient.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/UDPClient.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/UDPClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/Socks.build/UDPClient.swiftdeps"
+  }
+}

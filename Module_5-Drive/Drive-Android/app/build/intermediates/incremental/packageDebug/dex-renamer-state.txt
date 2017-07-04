@@ -1,0 +1,7 @@
+#Mon Jul 03 18:52:22 IST 2017
+base.0=/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_28f7b2f940af898ba476b06237bc64aff2221d07
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c6a91127d24f228008bcc60cb2e4ba5357dae2d5/classes.dex
+base.1=/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c6a91127d24f228008bcc60cb2e4ba5357dae2d5
+file.0=/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_28f7b2f940af898ba476b06237bc64aff2221d07/classes.dex

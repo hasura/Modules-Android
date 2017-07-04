@@ -1,0 +1,318 @@
+[
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_progress_indicator.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_progress_indicator.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_folder.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_folder.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/activity_folder_list.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/activity_folder_list.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/list_sheet_view.xml",
+        "source": "/home/amogh/.android/build-cache/ba555c501a312d2b97e5c6050376ca131cf57600/output/res/layout/list_sheet_view.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_file_uploading.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_file_uploading.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_line_file_options.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_line_file_options.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_empty.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_empty.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/grid_sheet_view.xml",
+        "source": "/home/amogh/.android/build-cache/ba555c501a312d2b97e5c6050376ca131cf57600/output/res/layout/grid_sheet_view.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_file_upload_failed.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_file_upload_failed.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/activity_file_detail.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/activity_file_detail.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/activity_authentication.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/activity_authentication.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/sheet_list_item.xml",
+        "source": "/home/amogh/.android/build-cache/ba555c501a312d2b97e5c6050376ca131cf57600/output/res/layout/sheet_list_item.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_failed.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_failed.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_loading.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_loading.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_file.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_file.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/sheet_grid_item.xml",
+        "source": "/home/amogh/.android/build-cache/ba555c501a312d2b97e5c6050376ca131cf57600/output/res/layout/sheet_grid_item.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/activity_launcher.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/activity_launcher.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/fragment_file_option.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/fragment_file_option.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/sheet_image_grid_item.xml",
+        "source": "/home/amogh/.android/build-cache/ba555c501a312d2b97e5c6050376ca131cf57600/output/res/layout/sheet_image_grid_item.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_collabsable_header.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_collabsable_header.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/fragment_mobile_number.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/fragment_mobile_number.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/activity_edit_file.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/activity_edit_file.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/fragment_otp.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/fragment_otp.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/sheet_list_item_subheader.xml",
+        "source": "/home/amogh/.android/build-cache/ba555c501a312d2b97e5c6050376ca131cf57600/output/res/layout/sheet_list_item_subheader.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/sheet_list_item_separator.xml",
+        "source": "/home/amogh/.android/build-cache/ba555c501a312d2b97e5c6050376ca131cf57600/output/res/layout/sheet_list_item_separator.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_collabsable_header_light.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_collabsable_header_light.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/activity_home.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/home/amogh/.android/build-cache/df89685d053125ebca6a6a7b5b6a577b103b6d9d/output/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/fragment_on_boarding.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/fragment_on_boarding.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/notification_template_media_custom.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/home/amogh/.android/build-cache/e408225220e0247ea476fe64cb9e5257ec54c7dc/output/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/res/merged/debug/layout/layout_file_header.xml",
+        "source": "/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/src/main/res/layout/layout_file_header.xml"
+    }
+]

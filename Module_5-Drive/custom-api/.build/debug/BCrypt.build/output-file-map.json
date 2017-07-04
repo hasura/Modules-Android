@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/BCrypt.build/master.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/BCrypt/BCrypt+Deprecated.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/BCrypt.build/BCrypt+Deprecated.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/BCrypt.build/BCrypt+Deprecated.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/BCrypt.build/BCrypt+Deprecated~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/BCrypt.build/BCrypt+Deprecated.swiftdeps"
+  },
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Crypto-1.1.0/Sources/BCrypt/BCrypt.swift": {
+    "dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/BCrypt.build/BCrypt.d",
+    "object": "/Users/jaison/Documents/Drive/custom-api/.build/debug/BCrypt.build/BCrypt.swift.o",
+    "swiftmodule": "/Users/jaison/Documents/Drive/custom-api/.build/debug/BCrypt.build/BCrypt~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaison/Documents/Drive/custom-api/.build/debug/BCrypt.build/BCrypt.swiftdeps"
+  }
+}

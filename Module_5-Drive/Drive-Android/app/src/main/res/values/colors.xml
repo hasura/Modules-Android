@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Light Theme
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#BDBDBD</color>
+    <color name="colorAccent">#536DFE</color>
+    <color name="parent_background">#E0E0E0</color>
+
+    <color name="recycler_view_header">#E0E0E0</color>
+
+    //Dark Theme
+    <color name="colorPrimary.Dark">#3F51B5</color>
+    <color name="colorPrimaryDark.Dark">#303F9F</color>
+    <color name="colorAccent.Dark">#37474F</color>
+
+    <color name="onBoardingPage1">#6BAB90</color>
+    <color name="onBoardingPage2">#ffc86f</color>
+    <color name="onBoardingPage3">#FE938C</color>
+
+    <color name="ripple_primary">@android:color/darker_gray</color>
+
+    <color name="text_uploading">#80757575</color>
+    <color name="text_hint">#757575</color>
+    <color name="button_disabled">#757575</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="semi_white">#80FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">@android:color/holo_red_dark</color>
+    <color name="green">#6BAB90</color>
+    <color name="gray">@android:color/darker_gray</color>
+</resources>

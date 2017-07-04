@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "c33356b98a3956e94172a133e9c2ee6c"
+build_time: [544860555, 343429000]
+inputs:
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Cache/CacheProtocol.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Cache/FluentCache.swift": [544860320, 0]
+  "/Users/jaison/Documents/Drive/custom-api/Packages/Vapor-1.1.13/Sources/Cache/MemoryCache.swift": [544860320, 0]
