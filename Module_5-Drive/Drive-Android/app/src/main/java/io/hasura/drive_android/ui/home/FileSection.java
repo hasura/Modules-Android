@@ -96,12 +96,6 @@ public class FileSection extends Section {
                     }
                 });
 
-        /*CustomGlide.with(context)
-                .load(file.getImageString())
-                .placeholder(R.drawable.ic_insert_photo)
-                .into(holder.imageView);*/
-
-
         holder.bottomLine.setVisibility(position < files.size() - 1 ? View.VISIBLE : View.INVISIBLE);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {

@@ -42,7 +42,8 @@ public class FolderSection extends StatelessSection {
 
     public void addData(HasuraFolder folder){
         this.folders.add(folder);
-        notifyAll();
+        listener.onItemCountChanged(folders.size());
+
     }
 
 
@@ -77,6 +78,7 @@ public class FolderSection extends StatelessSection {
 
     public interface Listener {
         void onFileSelected(HasuraFolder folder);
+        void onItemCountChanged(int count);
     }
 
     static class FolderViewHolder extends RecyclerView.ViewHolder {

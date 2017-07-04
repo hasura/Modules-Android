@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -25,6 +27,7 @@ import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
 import io.socket.client.IO;
 import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 
 /**
  * Created by amogh on 29/5/17.
@@ -52,6 +55,7 @@ public class ContactsActivity extends AppCompatActivity {
     HasuraUser user = Hasura.getClient().getUser();
     HasuraClient client = Hasura.getClient();
 
+    DataBaseHandler db;
     private static final String DATABASE_NAME = "chatapp";
     private static final int DATABASE_VERSION = 2;
 
@@ -63,6 +67,7 @@ public class ContactsActivity extends AppCompatActivity {
             super.onBackPressed();
         } else {
             getFragmentManager().popBackStack();
+            adapter.setContacts(db.getAllContacts());
         }
     }
 
@@ -71,14 +76,14 @@ public class ContactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contacts_activity);
 
-        final DataBaseHandler db = new DataBaseHandler(this,DATABASE_NAME,null,DATABASE_VERSION);
+        db = new DataBaseHandler(this,DATABASE_NAME,null,DATABASE_VERSION);
 
         socket.connect();
         socket.emit("join",user.getId());
 
         setSocket(socket);
 
-        /*socket.on("sendMessage", new Emitter.Listener() {
+        socket.on("sendMessage", new Emitter.Listener() {
             @Override
             public void call(final Object... args) {
                 runOnUiThread(new Runnable() {
@@ -87,10 +92,16 @@ public class ContactsActivity extends AppCompatActivity {
                         ChatMessage incomingMessage = new Gson().fromJson((String) args[0], ChatMessage.class);
 
                         db.insertMessage(incomingMessage);
+
+                        adapter.setContacts(db.getAllContacts());
+
+                        /*NotificationCompat.Builder builder = new NotificationCompat.Builder(ContactsActivity.this);
+                        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                        builder.setSound(alarmSound);*/
                     }
                 });
             }
-        });*/
+        });
 
 
         Long tsLong = System.currentTimeMillis();

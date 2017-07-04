@@ -77,17 +77,19 @@ public class ChattingActivity extends Fragment {
         socket.on("sendMessage", new Emitter.Listener() {
             @Override
             public void call(final Object... args) {
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        ChatMessage incomingMessage = new Gson().fromJson((String) args[0], ChatMessage.class);
+                if(getActivity() != null) {
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ChatMessage incomingMessage = new Gson().fromJson((String) args[0], ChatMessage.class);
 
-                        db.insertMessage(incomingMessage);
-                        if(incomingMessage.getReceiver() == Global.receiverId || incomingMessage.getSender() == Global.receiverId){
-                            adapter.addMessage(incomingMessage);
+                            db.insertMessage(incomingMessage);
+                            if (incomingMessage.getReceiver() == Global.receiverId || incomingMessage.getSender() == Global.receiverId) {
+                                adapter.addMessage(incomingMessage);
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
         });
 
@@ -145,7 +147,7 @@ public class ChattingActivity extends Fragment {
                                 public void onSuccess(MessageResponse messageResponse) {
                                     adapter.addMessage(chat);
                                     db.insertMessage(chat);
-                                    socket.emit("chatMessage",new Gson().toJson(chat), 104/*Global.receiverId*/);
+                                    socket.emit("chatMessage",new Gson().toJson(chat), Global.receiverId);
                                 }
 
                                 @Override

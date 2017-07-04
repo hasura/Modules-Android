@@ -11,8 +11,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.hasura.sdk.Callback;
 import io.hasura.sdk.Hasura;
+import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
+import io.hasura.sdk.exception.HasuraException;
 
 /**
  * Created by amogh on 29/5/17.
@@ -25,6 +28,7 @@ public class ContactsListAdapter extends RecyclerView.Adapter<ContactsListViewHo
     String timeStampStr;
 
     HasuraUser user = Hasura.getClient().getUser();
+    HasuraClient client = Hasura.getClient();
 
     public ContactsListAdapter(Interactor interactor) {
         this.interactor = interactor;
@@ -44,13 +48,32 @@ public class ContactsListAdapter extends RecyclerView.Adapter<ContactsListViewHo
     }
 
     @Override
-    public void onBindViewHolder(ContactsListViewHolder holder, final int position) {
+    public void onBindViewHolder(final ContactsListViewHolder holder, final int position) {
 
         final ChatMessage contact = contacts.get(position);
 
-        receiverId = contact.getReceiver();
-        //Call a select query on the hasura auth  table to get username where receiverId = user_id
+        if(contact.getSender() == user.getId()){
+            receiverId = contact.getReceiver();
+        }else
+            receiverId = contact.getSender();
+
         holder.name.setText("User");
+
+        client.useDataService()
+                .setRequestBody(new SelectQuery(receiverId))
+                .expectResponseTypeArrayOf(UserDetails.class)
+                .enqueue(new Callback<List<UserDetails>, HasuraException>() {
+                    @Override
+                    public void onSuccess(List<UserDetails> userDetailses) {
+                        holder.name.setText(userDetailses.get(0).getName());
+                    }
+
+                    @Override
+                    public void onFailure(HasuraException e) {
+
+                    }
+                });
+
         holder.contents.setText(contact.getContent());
 
         timeStampStr = contact.getTime();

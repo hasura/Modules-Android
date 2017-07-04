@@ -7,19 +7,16 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import io.hasura.drive_android.R;
-import io.hasura.drive_android.utils.SmsReceiver;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,13 +56,13 @@ public class OtpFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_otp, container, false);
         unbinder = ButterKnife.bind(this, view);
 
-        SmsReceiver.bindListener(new SmsReceiver.SmsListener() {
+        /*SmsReceiver.bindListener(new SmsReceiver.SmsListener() {
             @Override
             public void messageReceived(String otpString) {
                 Log.d("Text", otpString);
                 otp.setText(otpString);
             }
-        });
+        });*/
 
         return view;
     }

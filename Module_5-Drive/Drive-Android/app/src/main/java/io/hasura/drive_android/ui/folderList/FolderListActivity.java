@@ -71,6 +71,11 @@ public class FolderListActivity extends AppCompatActivity {
             public void onFileSelected(HasuraFolder folder) {
                 HomeActivity.startActivity(FolderListActivity.this, folder);
             }
+
+            @Override
+            public void onItemCountChanged(int count) {
+                adapter.notifyDataSetChanged();
+            }
         });
         adapter.addSection(folderSection);
         recyclerView.setAdapter(adapter);

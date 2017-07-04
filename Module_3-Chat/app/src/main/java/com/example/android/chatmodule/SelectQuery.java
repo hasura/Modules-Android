@@ -18,7 +18,7 @@ public class SelectQuery {
         String table = "user_details";
 
         @SerializedName("columns")
-        String[] columns = {"name","status","user_id"};
+        String[] columns = {"name","status","user_id","file_id"};
 
         @SerializedName("where")
         Where where;
