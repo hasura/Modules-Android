@@ -1,5 +1,6 @@
 package com.example.android.chatmodule;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -60,7 +61,7 @@ public class ChattingActivity extends Fragment {
     List<ChatMessage> allData;
     List<ChatMessage> displayData;
 
-    Socket socket;
+    ChatSocket socket;
 
 
     @Override
@@ -69,32 +70,33 @@ public class ChattingActivity extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        parentViewHolder = inflater.inflate(R.layout.activity_chatting,container,false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        parentViewHolder = inflater.inflate(R.layout.activity_chatting, container, false);
 
         socket = getSocket();
 
-        socket.on("sendMessage", new Emitter.Listener() {
-            @Override
-            public void call(final Object... args) {
-                if(getActivity() != null) {
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            ChatMessage incomingMessage = new Gson().fromJson((String) args[0], ChatMessage.class);
+        //TODO: Add from the activity
+//        socket.on("sendMessage", new Emitter.Listener() {
+//            @Override
+//            public void call(final Object... args) {
+//                if(getActivity() != null) {
+//                    getActivity().runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            ChatMessage incomingMessage = new Gson().fromJson((String) args[0], ChatMessage.class);
+//
+//                            db.insertMessage(incomingMessage);
+//                            if (incomingMessage.getReceiver() == Global.receiverId || incomingMessage.getSender() == Global.receiverId) {
+//                                adapter.addMessage(incomingMessage);
+//                            }
+//                        }
+//                    });
+//                }
+//            }
+//        });
 
-                            db.insertMessage(incomingMessage);
-                            if (incomingMessage.getReceiver() == Global.receiverId || incomingMessage.getSender() == Global.receiverId) {
-                                adapter.addMessage(incomingMessage);
-                            }
-                        }
-                    });
-                }
-            }
-        });
 
-
-        db = new DataBaseHandler(getActivity().getApplicationContext(),DATABASE_NAME,null,DATABASE_VERSION);
+        db = new DataBaseHandler(getActivity().getApplicationContext(), DATABASE_NAME, null, DATABASE_VERSION);
 
         message = (EditText) parentViewHolder.findViewById(R.id.chat_message);
         recyclerView = (RecyclerView) parentViewHolder.findViewById(R.id.chat_recyclerview);
@@ -115,9 +117,9 @@ public class ChattingActivity extends Fragment {
         allData = db.getAllMessages();
         //latestTime = allData.get(paginationNumber-1).getTime();
         totalItemCount = allData.size();
-            if(allData.size() != 0)
-                //loadChats(0);
-                adapter.setChatMessages(allData);
+        if (allData.size() != 0)
+            //loadChats(0);
+            adapter.setChatMessages(allData);
 
         recyclerView.scrollToPosition(adapter.getItemCount() - 1);
 
@@ -129,8 +131,9 @@ public class ChattingActivity extends Fragment {
                 time = getRequiredTime(tsLong.toString());
                 //time = tsLong.toString();
 
-                if(message.getText().toString().isEmpty() || message.getText().toString().length() == 0){}
-                 else {
+                if (message.getText().toString().isEmpty() || message.getText().toString().length() == 0) {
+
+                } else {
                     final ChatMessage chat = new ChatMessage();
                     chat.setContent(message.getText().toString());
                     chat.setTime(time);
@@ -138,23 +141,30 @@ public class ChattingActivity extends Fragment {
                     chat.setReceiver(receiverId);
                     chat.setUserId(user.getId());
 
-                    client
-                            .useDataService()
-                            .setRequestBody(new InsertMessageQuery(message.getText().toString(),time,senderId,receiverId,user.getId()))
-                            .expectResponseType(MessageResponse.class)
-                            .enqueue(new Callback<MessageResponse, HasuraException>() {
-                                @Override
-                                public void onSuccess(MessageResponse messageResponse) {
-                                    adapter.addMessage(chat);
-                                    db.insertMessage(chat);
-                                    socket.emit("chatMessage",new Gson().toJson(chat), Global.receiverId);
-                                }
+                    socket.emitMessage(new Gson().toJson(chat));
+                    adapter.addMessage(chat);
+                    db.insertMessage(chat);
 
-                                @Override
-                                public void onFailure(HasuraException e) {
-                                    Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
-                                }
-                            });
+                    //TODO: Server side
+//                    client.useDataService()
+//                            .setRequestBody(new InsertMessageQuery(message.getText().toString(),time,senderId,receiverId,user.getId()))
+//                            .expectResponseType(MessageResponse.class)
+//                            .enqueue(new Callback<MessageResponse, HasuraException>() {
+//                                @Override
+//                                public void onSuccess(MessageResponse messageResponse) {
+//                                    adapter.addMessage(chat);
+//                                    db.insertMessage(chat);
+//
+//                                    socket.emitMessage();
+//
+//                                    socket.emit("chatMessage",new Gson().toJson(chat), Global.receiverId);
+//                                }
+//
+//                                @Override
+//                                public void onFailure(HasuraException e) {
+//                                    Toast.makeText(getActivity().getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+//                                }
+//                            });
                 }
                 message.setText("");
             }
@@ -165,12 +175,13 @@ public class ChattingActivity extends Fragment {
 
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         super.onDestroy();
         //socket.disconnect();
     }
-    public String getRequiredTime(String timeStampStr){
-        try{
+
+    public String getRequiredTime(String timeStampStr) {
+        try {
             DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             Date netDate = (new Date(Long.parseLong(timeStampStr)));
             return sdf.format(netDate);
@@ -203,11 +214,11 @@ public class ChattingActivity extends Fragment {
         });
     }*/
 
-    private void loadChats(int start){
-        if(totalItemCount > paginationNumber) {
+    private void loadChats(int start) {
+        if (totalItemCount > paginationNumber) {
 
-            if(displayedsize + paginationNumber > totalItemCount){
-                displayData = allData.subList(displayedsize,totalItemCount-1);
+            if (displayedsize + paginationNumber > totalItemCount) {
+                displayData = allData.subList(displayedsize, totalItemCount - 1);
                 /*displayData = db.getAllMessages(paginationNumber,latestTime);
                 latestTime = displayData.get(displayData.size()-1).getTime();
 
@@ -216,7 +227,7 @@ public class ChattingActivity extends Fragment {
 
                 adapter.addMessage(displayData);
                 displayedsize = totalItemCount + 1;
-            }else{
+            } else {
                 displayData = allData.subList(start, start + paginationNumber);
                 /*displayData = db.getAllMessages(paginationNumber,latestTime);
                 latestTime = displayData.get(displayData.size()-1).getTime();
@@ -227,7 +238,7 @@ public class ChattingActivity extends Fragment {
                 adapter.addMessage(displayData);
                 displayedsize = displayedsize + paginationNumber;
             }
-        }else{
+        } else {
             /*displayData = db.getAllMessages(paginationNumber,latestTime);
             latestTime = displayData.get(displayData.size()-1).getTime();
 
@@ -239,7 +250,24 @@ public class ChattingActivity extends Fragment {
         }
     }
 
-    public Socket getSocket() {
-        return Global.socket;
+    public ChatSocket getSocket() {
+        return chatSocketProvider.getSocket();
+    }
+
+    public interface ChatSocketProvider {
+        ChatSocket getSocket();
+    }
+
+    ChatSocketProvider chatSocketProvider;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        if (context instanceof ChatSocketProvider) {
+            chatSocketProvider = (ChatSocketProvider) context;
+        } else {
+            throw new RuntimeException("Called of Chatting Activity must implement ChatSocket Provider");
+        }
     }
 }

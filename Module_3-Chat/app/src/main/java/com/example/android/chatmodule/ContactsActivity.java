@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,32 +26,17 @@ import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
-import io.socket.client.IO;
-import io.socket.client.Socket;
-import io.socket.emitter.Emitter;
 
 /**
  * Created by amogh on 29/5/17.
  */
 
-public class ContactsActivity extends AppCompatActivity {
+public class ContactsActivity extends AppCompatActivity implements ChattingActivity.ChatSocketProvider {
 
     ContactsListAdapter adapter;
     RecyclerView recyclerView;
     String latestTime;
     FloatingActionButton floatingActionButton;
-
-    private Socket socket;{
-        try{
-            socket = IO.socket("http://192.168.0.131:3000");
-        }catch(URISyntaxException e){
-            throw new RuntimeException(e);
-        }
-    }
-
-    public void setSocket(Socket socket) {
-        Global.socket = socket;
-    }
 
     HasuraUser user = Hasura.getClient().getUser();
     HasuraClient client = Hasura.getClient();
@@ -58,6 +44,10 @@ public class ContactsActivity extends AppCompatActivity {
     DataBaseHandler db;
     private static final String DATABASE_NAME = "chatapp";
     private static final int DATABASE_VERSION = 2;
+
+    ChatSocket chatSocket;
+
+    private static String TAG = "ContactsActivity";
 
     @Override
     public void onBackPressed() {
@@ -71,52 +61,50 @@ public class ContactsActivity extends AppCompatActivity {
         }
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contacts_activity);
 
-        db = new DataBaseHandler(this,DATABASE_NAME,null,DATABASE_VERSION);
+        db = new DataBaseHandler(this, DATABASE_NAME, null, DATABASE_VERSION);
 
-        socket.connect();
-        socket.emit("join",user.getId());
-
-        setSocket(socket);
-
-        socket.on("sendMessage", new Emitter.Listener() {
+        chatSocket = new ChatSocketImpl(new SocketEventHandler() {
             @Override
-            public void call(final Object... args) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        ChatMessage incomingMessage = new Gson().fromJson((String) args[0], ChatMessage.class);
+            public void onNewChatMessageArrived(ChatMessage chatMessage) {
+                db.insertMessage(chatMessage);
+                adapter.setContacts(db.getAllContacts());
+            }
 
-                        db.insertMessage(incomingMessage);
+            @Override
+            public void onSocketConnected() {
 
-                        adapter.setContacts(db.getAllContacts());
+            }
 
-                        /*NotificationCompat.Builder builder = new NotificationCompat.Builder(ContactsActivity.this);
-                        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-                        builder.setSound(alarmSound);*/
-                    }
-                });
+            @Override
+            public void onSocketDisconnected() {
+
+            }
+
+            @Override
+            public void onSocketError(Object... args) {
             }
         });
 
+        chatSocket.connect();
 
         Long tsLong = System.currentTimeMillis();
         String time = getRequiredTime(tsLong.toString());
         latestTime = db.getLatest();
 
-        client
-                .useDataService()
+        client.useDataService()
                 .setRequestBody(new SelectMessagesQuery(latestTime))
                 .expectResponseTypeArrayOf(ChatMessage.class)
                 .enqueue(new Callback<List<ChatMessage>, HasuraException>() {
                     @Override
                     public void onSuccess(List<ChatMessage> chatMessages) {
                         int i;
-                        for(i = 0; i < chatMessages.size(); i++)
+                        for (i = 0; i < chatMessages.size(); i++)
                             db.insertMessage(chatMessages.get(i));
                         adapter.setContacts(db.getAllContacts());
                     }
@@ -132,22 +120,22 @@ public class ContactsActivity extends AppCompatActivity {
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        adapter = new ContactsListAdapter(new ContactsListAdapter.Interactor(){
+        adapter = new ContactsListAdapter(new ContactsListAdapter.Interactor() {
             @Override
             public void onChatClicked(int position, ChatMessage contact) {
 
-                if(contact.getSender() == user.getId())
+                if (contact.getSender() == user.getId())
                     Global.receiverId = contact.getReceiver();
                 else
                     Global.receiverId = contact.getSender();
 
                 floatingActionButton.setVisibility(View.GONE);
-                getSupportFragmentManager().beginTransaction().add(R.id.frame_layout,new ChattingActivity()).addToBackStack(null).commit();
+                getSupportFragmentManager().beginTransaction().add(R.id.frame_layout, new ChattingActivity()).addToBackStack(null).commit();
             }
 
             @Override
             public void onChatLongClicked(final int position, final ChatMessage contact) {
-                checkForDeleteContact(position,contact);
+                checkForDeleteContact(position, contact);
             }
 
         });
@@ -172,7 +160,7 @@ public class ContactsActivity extends AppCompatActivity {
                             Global.receiverId = getNumber(id.getText().toString());
                             floatingActionButton.setVisibility(View.GONE);
                             getSupportFragmentManager().beginTransaction().add(R.id.frame_layout, new ChattingActivity()).commit();
-                        }else
+                        } else
                             Toast.makeText(ContactsActivity.this, "Chat with user already exists!!", Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -181,8 +169,8 @@ public class ContactsActivity extends AppCompatActivity {
         });
     }
 
-    public void checkForDeleteContact(final int position, final ChatMessage contact){
-        final DataBaseHandler db = new DataBaseHandler(this,DATABASE_NAME,null,DATABASE_VERSION);
+    public void checkForDeleteContact(final int position, final ChatMessage contact) {
+        final DataBaseHandler db = new DataBaseHandler(this, DATABASE_NAME, null, DATABASE_VERSION);
 
         AlertDialog.Builder alert = new AlertDialog.Builder(ContactsActivity.this);
         alert.setMessage("Are you sure you want to delete this chat?");
@@ -196,8 +184,8 @@ public class ContactsActivity extends AppCompatActivity {
         });
     }
 
-    public String getRequiredTime(String timeStampStr){
-        try{
+    public String getRequiredTime(String timeStampStr) {
+        try {
             DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             Date netDate = (new Date(Long.parseLong(timeStampStr)));
             return sdf.format(netDate);
@@ -206,15 +194,27 @@ public class ContactsActivity extends AppCompatActivity {
         }
     }
 
-    public int getNumber(String string){
+    public int getNumber(String string) {
         char[] input = string.toCharArray();
         int i;
         int id = 0;
-        for (i = 0;i < input.length;i++){
+        for (i = 0; i < input.length; i++) {
             id = id * 10;
             id = id + (input[i] - '0');
         }
 
         return id;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        chatSocket.disconnect();
+    }
+
+
+    @Override
+    public ChatSocket getSocket() {
+        return chatSocket;
     }
 }
