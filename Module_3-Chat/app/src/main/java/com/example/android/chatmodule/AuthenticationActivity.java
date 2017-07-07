@@ -49,7 +49,7 @@ public class AuthenticationActivity extends AppCompatActivity
 
 
         if (Hasura.getClient().getUser().getAuthToken() != null) {
-            Intent i = new Intent(AuthenticationActivity.this,ContactsActivity.class);
+            Intent i = new Intent(AuthenticationActivity.this,MainActivity.class);
             startActivity(i);
             finish();
         }else{
@@ -84,7 +84,7 @@ public class AuthenticationActivity extends AppCompatActivity
                     break;
                 case VERIFYING_OTP_SUCCESSFUL:
                     showProgressBar(false);
-                    Intent i = new Intent(AuthenticationActivity.this,ContactsActivity.class);
+                    Intent i = new Intent(AuthenticationActivity.this,Profile.class);
                     startActivity(i);
                     finish();
                     break;

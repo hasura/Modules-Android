@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by amogh on 16/6/17.
  */
 
-public class SelectQuery {
+public class CheckUserQuery {
     @SerializedName("type")
     String type = "select";
 
@@ -25,13 +25,13 @@ public class SelectQuery {
     }
 
     class Where{
-        @SerializedName("user_id")
-        Integer userId;
+        @SerializedName("mobile")
+        String mobile;
     }
 
-    public SelectQuery(Integer userId){
+    public CheckUserQuery(String mobile){
         args = new Args();
         args.where = new Where();
-        args.where.userId = userId;
+        args.where.mobile = mobile;
     }
 }

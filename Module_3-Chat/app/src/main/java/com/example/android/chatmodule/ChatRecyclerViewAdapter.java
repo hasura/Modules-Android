@@ -40,9 +40,9 @@ public class ChatRecyclerViewAdapter extends RecyclerView.Adapter<ChatViewHolder
 
         switch (viewType){
             case ITEM_LEFT:
-                return new LeftChatViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.chatitem_left,parent,false));
+                return new LeftChatViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chat_left,parent,false));
             case ITEM_RIGHT:
-                return new RightChatViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.chatitem_right,parent,false));
+                return new RightChatViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chat_right,parent,false));
         }
         return null;
     }

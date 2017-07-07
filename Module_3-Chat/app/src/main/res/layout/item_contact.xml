@@ -15,7 +15,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/contact_name"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:padding="3dp"
                 android:textStyle="bold"
                 android:layout_marginLeft="20dp"
@@ -29,7 +29,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="7dp"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:padding="7dp"
                 android:textColor="#228b22"
                 android:maxWidth="100dp"/>

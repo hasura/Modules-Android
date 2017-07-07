@@ -5,7 +5,7 @@ var io = require('socket.io')(http);
 
 //your routes here
 app.get('/', function (req, res) {
-    res.send("Hello World!");
+    res.sendFile(__dirname + '/index.html');
 });
 
 io.on('connection',function(socket){
@@ -34,6 +34,6 @@ io.on('connection',function(socket){
 });
 
 
-app.listen(8080, function () {
+http.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });

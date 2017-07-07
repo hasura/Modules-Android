@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
     android:padding="4dp">
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/message_display_area"
-        android:background="@drawable/chat_background">
-
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/message_type_area"
-            android:id="@+id/chat_recyclerview" />
-
-    </LinearLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_alignBottom="@+id/message_type_area"
+        android:id="@+id/chat_recyclerview" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,4 +44,4 @@
 
         </RelativeLayout>
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

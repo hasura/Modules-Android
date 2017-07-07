@@ -9,4 +9,5 @@ import io.socket.client.Socket;
 public class Global {
     static int receiverId;
     static Socket socket;
+    static String mobile;
 }

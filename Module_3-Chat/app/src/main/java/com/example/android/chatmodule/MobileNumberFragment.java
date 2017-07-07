@@ -21,10 +21,6 @@ public class MobileNumberFragment extends Fragment {
     TextInputEditText mobileNumber;
     @BindView(R.id.til_mobile_number)
     TextInputLayout tilMobileNumber;
-    @BindView(R.id.til_user_name)
-    TextInputLayout tilUsername;
-    @BindView(R.id.user_name)
-    TextInputEditText username;
 
     Unbinder unbinder;
     @BindView(R.id.next_button)
@@ -43,7 +39,6 @@ public class MobileNumberFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_mobile_number, container, false);
         unbinder = ButterKnife.bind(this, view);
         return view;
@@ -75,14 +70,13 @@ public class MobileNumberFragment extends Fragment {
     @OnClick(R.id.next_button)
     public void onViewClicked() {
         tilMobileNumber.setError(null);
-        tilUsername.setError(null);
         String enteredMobileNumber = mobileNumber.getText().toString().trim();
-        String enteredUsername = username.getText().toString().trim();
+        Global.mobile = enteredMobileNumber;
         if (enteredMobileNumber.isEmpty()) {
             showErrorMessage("Please enter a valid Mobile Number");
             return;
         }
-        interactionListener.onNextButtonClicked(mobileNumber.getText().toString().trim(),username.getText().toString().trim());
+        interactionListener.onNextButtonClicked(mobileNumber.getText().toString().trim(),mobileNumber.getText().toString().trim());
         disableNextButton();
     }
 

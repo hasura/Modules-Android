@@ -35,7 +35,7 @@ public class OtpFragment extends Fragment {
     private InteractionListener interactionListener;
 
     public OtpFragment() {
-        // Required empty public constructor
+
     }
 
     public static OtpFragment getInstance() {

@@ -3,17 +3,19 @@ package com.example.android.registrationhasura;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.util.List;
 
 import io.hasura.sdk.Callback;
@@ -21,9 +23,7 @@ import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
-import io.hasura.sdk.model.response.FileUploadResponse;
 import io.hasura.sdk.responseListener.FileDownloadResponseListener;
-import io.hasura.sdk.responseListener.FileUploadResponseListener;
 
 /**
  * Created by amogh on 1/6/17.
@@ -113,7 +113,7 @@ public class Profile extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bitmap bitmap = ((BitmapDrawable)picture.getDrawable()).getBitmap();
+                /*Bitmap bitmap = ((BitmapDrawable)picture.getDrawable()).getBitmap();
                 byte[] image = Photo.getBytes(bitmap);
                 final UserDetails userDetails = new UserDetails();
                 userDetails.setName(name.getText().toString().trim());
@@ -164,7 +164,43 @@ public class Profile extends AppCompatActivity {
                                     Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
                                 }
                             });
+                }*/
+
+                File dir = Environment.getExternalStorageDirectory();
+                File[] files = dir.listFiles();
+
+                Log.i("File",dir.toString());
+
+                //Log.i("File", files.length + "");
+                /*for (File file: files) {
+                    Log.i("File", "Filename: " + file.getName());
+                }*/
+
+
+                //File yourFile = new File("/storage/emulated/0/DCIM/Camera/IMG_20170403_125715.jpg");
+                File yourFile = new File("/document/3332-6230:DCIM/DCIM/Screenshots");
+
+                File[] fileft = yourFile.listFiles();
+                Log.i("File",yourFile.toString());
+
+                Log.i("File", fileft.length + "");
+                for (File file: fileft) {
+                    Log.i("File", "Filename: " + file.getName());
                 }
+
+
+                /*client.useFileStoreService()
+                        .uploadFile("SDcard_picture", yourFile, "image/*", new FileUploadResponseListener() {
+                            @Override
+                            public void onUploadComplete(FileUploadResponse fileUploadResponse) {
+                                Toast.makeText(Profile.this, "Successful", Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onUploadFailed(HasuraException e) {
+                                Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_LONG).show();
+                            }
+                        });*/
             }
         });
 

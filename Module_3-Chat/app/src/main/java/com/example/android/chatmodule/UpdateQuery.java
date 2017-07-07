@@ -30,6 +30,10 @@ public class UpdateQuery {
 
         @SerializedName("status")
         String status;
+
+        @SerializedName("file_id")
+        String file_id;
+
     }
 
     class Where{
@@ -42,6 +46,7 @@ public class UpdateQuery {
         args.set = new $Set();
         args.set.name = userDetails.getName();
         args.set.status = userDetails.getStatus();
+        args.set.file_id = userDetails.getFileId();
         args.where = new Where();
         args.where.userId = userDetails.getId();
     }

@@ -6,40 +6,31 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1499162186001"
+    timestamp="1499320337434"
     token="-161602817307176272"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="2735" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="653" />
+        duration="0" />
     <task
         name="verifier"
-        duration="201" />
+        duration="0" />
 
-    <artifact
-        location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/outputs/apk/app-debug.apk"
-        type="SPLIT_MAIN" />
     <artifact
         location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
         location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
         location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
@@ -48,7 +39,13 @@
         location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
     <artifact
+        location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
         location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
         location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -59,28 +56,22 @@
     <artifact
         location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
+    <artifact
+        location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/outputs/apk/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1499162186001"
+        timestamp="1499320337434"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
         <artifact
             location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
             location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
@@ -89,7 +80,13 @@
             location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
+            location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
             location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -100,6 +97,9 @@
         <artifact
             location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
+        <artifact
+            location="/home/amogh/Amogh/Programming/Hasura/Modules-Android/Module_5-Drive/Drive-Android/app/build/outputs/apk/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
