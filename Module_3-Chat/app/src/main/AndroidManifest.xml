@@ -27,7 +27,7 @@
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Profile"
+        <activity android:name=".ProfileActivity"
             android:windowSoftInputMode="adjustPan"/>
     </application>
 

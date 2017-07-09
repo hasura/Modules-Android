@@ -84,7 +84,7 @@ public class AuthenticationActivity extends AppCompatActivity
                     break;
                 case VERIFYING_OTP_SUCCESSFUL:
                     showProgressBar(false);
-                    Intent i = new Intent(AuthenticationActivity.this,Profile.class);
+                    Intent i = new Intent(AuthenticationActivity.this,ProfileActivity.class);
                     startActivity(i);
                     finish();
                     break;

@@ -34,7 +34,7 @@ import io.hasura.sdk.responseListener.FileUploadResponseListener;
  * Created by amogh on 1/6/17.
  */
 
-public class Profile extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     EditText name;
     EditText status;
@@ -52,7 +52,7 @@ public class Profile extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        Intent i = new Intent(Profile.this,MainActivity.class);
+        Intent i = new Intent(ProfileActivity.this,MainActivity.class);
         startActivity(i);
         finish();
     }
@@ -81,7 +81,7 @@ public class Profile extends AppCompatActivity {
 
         ActionBar toolbar = getSupportActionBar();
         toolbar.setDisplayShowTitleEnabled(true);
-        toolbar.setTitle("Your Profile");
+        toolbar.setTitle("Your ProfileActivity");
 
         toolbar.setHomeButtonEnabled(true);
         toolbar.setDisplayHomeAsUpEnabled(true);
@@ -102,11 +102,11 @@ public class Profile extends AppCompatActivity {
                                 update = 1;
 
                             fileId = userDetailsList.get(0).getFileId();
-                            Toast.makeText(Profile.this, "Welcome", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProfileActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
                             name.setText(userDetailsList.get(0).getName());
                             status.setText(userDetailsList.get(0).getStatus());
-                            picture.getLayoutParams().height = (int) Profile.this.getResources().getDimension(R.dimen.image_set_height);
-                            picture.getLayoutParams().width = (int) Profile.this.getResources().getDimension(R.dimen.image_set_width);
+                            picture.getLayoutParams().height = (int) ProfileActivity.this.getResources().getDimension(R.dimen.image_set_height);
+                            picture.getLayoutParams().width = (int) ProfileActivity.this.getResources().getDimension(R.dimen.image_set_width);
                             client.useFileStoreService()
                                     .downloadFile(userDetailsList.get(0).getFileId(), new FileDownloadResponseListener() {
                                         @Override
@@ -116,7 +116,7 @@ public class Profile extends AppCompatActivity {
 
                                         @Override
                                         public void onDownloadFailed(HasuraException e) {
-                                            Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(ProfileActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
                                         }
 
                                         @Override
@@ -128,7 +128,7 @@ public class Profile extends AppCompatActivity {
 
                         @Override
                         public void onFailure(HasuraException e) {
-                            Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProfileActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     });
         }
@@ -164,12 +164,12 @@ public class Profile extends AppCompatActivity {
                                                  .enqueue(new Callback<ResponseMessage, HasuraException>() {
                                                      @Override
                                                      public void onSuccess(ResponseMessage responseMessage) {
-                                                         Toast.makeText(Profile.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
+                                                         Toast.makeText(ProfileActivity.this, "ProfileActivity updated successfully", Toast.LENGTH_SHORT).show();
                                                      }
 
                                                      @Override
                                                      public void onFailure(HasuraException e) {
-                                                         Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                                         Toast.makeText(ProfileActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
                                                      }
                                                  });
                                      } else {
@@ -179,12 +179,12 @@ public class Profile extends AppCompatActivity {
                                                  .enqueue(new Callback<ResponseMessage, HasuraException>() {
                                                      @Override
                                                      public void onSuccess(ResponseMessage responseMessage) {
-                                                         Toast.makeText(Profile.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
+                                                         Toast.makeText(ProfileActivity.this, "ProfileActivity updated successfully", Toast.LENGTH_SHORT).show();
                                                      }
 
                                                      @Override
                                                      public void onFailure(HasuraException e) {
-                                                         Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                                         Toast.makeText(ProfileActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
                                                      }
                                                  });
                                      }
@@ -192,7 +192,7 @@ public class Profile extends AppCompatActivity {
 
                                  @Override
                                  public void onUploadFailed(HasuraException e) {
-                                     Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                     Toast.makeText(ProfileActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
                                  }
                         });
 

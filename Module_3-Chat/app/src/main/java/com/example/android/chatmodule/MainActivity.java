@@ -98,8 +98,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.Settings:
-                Intent i = new Intent(MainActivity.this,Profile.class);
+                Intent i = new Intent(MainActivity.this,ProfileActivity.class);
                 startActivity(i);
+                finish();
                 break;
             case R.id.Logout:
                 HasuraUser user = Hasura.getClient().getUser();
