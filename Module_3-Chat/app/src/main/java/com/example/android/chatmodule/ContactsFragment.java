@@ -84,6 +84,7 @@ public class ContactsFragment extends Fragment {
             public void onNewChatMessageArrived(ChatMessage chatMessage) {
                 db.insertMessage(chatMessage);
                 adapter.setContacts(db.getAllContacts());
+                recyclerView.scrollToPosition(adapter.getItemCount()-1);
             }
 
             @Override
@@ -120,6 +121,7 @@ public class ContactsFragment extends Fragment {
                         for(i = 0; i < chatMessages.size(); i++)
                             db.insertMessage(chatMessages.get(i));
                         adapter.setContacts(db.getAllContacts());
+                        recyclerView.scrollToPosition(adapter.getItemCount()-1);
                     }
 
                     @Override
@@ -162,6 +164,7 @@ public class ContactsFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         adapter.setContacts(db.getAllContacts());
+        recyclerView.scrollToPosition(adapter.getItemCount()-1);
 
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {

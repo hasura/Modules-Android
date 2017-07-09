@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:padding="4dp">
+    android:padding="4dp"
+    android:background="@drawable/chat_background">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
@@ -19,20 +20,20 @@
         android:orientation="horizontal"
         android:id="@+id/message_type_area"
         android:layout_alignParentBottom="true">
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:id="@+id/message_type_area1"
-            android:padding="16dp"
-            android:weightSum="1">
+            android:padding="16dp">
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Type your Message Here"
-                android:id="@+id/chat_message"/>
+                android:id="@+id/chat_message"
+                android:layout_weight="3"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -42,6 +43,6 @@
                 android:padding="5dp"
                 android:layout_alignParentRight="true"/>
 
-        </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

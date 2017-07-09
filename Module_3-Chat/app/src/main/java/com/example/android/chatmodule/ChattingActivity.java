@@ -1,6 +1,7 @@
 package com.example.android.chatmodule;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -9,6 +10,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -21,7 +23,6 @@ import java.util.Date;
 import java.util.List;
 
 import io.hasura.sdk.Hasura;
-import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
 
 public class ChattingActivity extends AppCompatActivity {
@@ -33,20 +34,10 @@ public class ChattingActivity extends AppCompatActivity {
     Button send;
     ChatRecyclerViewAdapter adapter;
     ProgressDialog progressDialog;
-    Button backButton;
 
     String time;
     int totalItemCount;
-    int displayedsize = 0;
-    int paginationNumber = 6;
 
-    String latestTime;
-
-    boolean canFetch = true;
-
-    boolean isLoading = false;
-
-    HasuraClient client = Hasura.getClient();
     HasuraUser user = Hasura.getClient().getUser();
 
     DataBaseHandler db;
@@ -58,7 +49,6 @@ public class ChattingActivity extends AppCompatActivity {
     private static final int DATABASE_VERSION = 2;
 
     List<ChatMessage> allData;
-    List<ChatMessage> displayData;
 
     ChatSocket chatSocket;
 
@@ -126,16 +116,12 @@ public class ChattingActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         totalItemCount = linearLayoutManager.getItemCount();
 
-        //setRecyclerViewScrollListener();
-
         receiverId = Global.receiverId;
         senderId = user.getId();
 
         allData = db.getAllMessages();
-        //latestTime = allData.get(paginationNumber-1).getTime();
         totalItemCount = allData.size();
         if (allData.size() != 0)
-            //loadChats(0);
             adapter.setChatMessages(allData);
 
         recyclerView.scrollToPosition(adapter.getItemCount() - 1);
@@ -145,7 +131,6 @@ public class ChattingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Long tsLong = System.currentTimeMillis();
                 time = getRequiredTime(tsLong.toString());
-                //time = tsLong.toString();
 
                 if (message.getText().toString().isEmpty() || message.getText().toString().length() == 0) {
                 } else {
@@ -161,6 +146,12 @@ public class ChattingActivity extends AppCompatActivity {
                     db.insertMessage(chat);
                 }
                 message.setText("");
+
+                recyclerView.scrollToPosition(adapter.getItemCount()-1);
+
+                InputMethodManager imm = (InputMethodManager)getSystemService(
+                        Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(message.getWindowToken(), 0);
             }
         });
     }
@@ -187,66 +178,6 @@ public class ChattingActivity extends AppCompatActivity {
             return sdf.format(netDate);
         } catch (Exception ignored) {
             return "xx";
-        }
-    }
-
-    /*private void setRecyclerViewScrollListener() {
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy){
-                super.onScrolled(recyclerView, dx, dy);
-
-                int total = linearLayoutManager.getItemCount();
-                int lastVisibleItemCount = linearLayoutManager.findLastVisibleItemPosition();
-
-                if (!isLoading && displayedsize < totalItemCount) {
-                    if (total - 1 == lastVisibleItemCount)
-                        if (dy < 0){
-                            loadChats(displayedsize);
-                        }
-                }
-            }
-        });
-    }*/
-
-    private void loadChats(int start) {
-        if (totalItemCount > paginationNumber) {
-
-            if (displayedsize + paginationNumber > totalItemCount) {
-                displayData = allData.subList(displayedsize, totalItemCount - 1);
-                /*displayData = db.getAllMessages(paginationNumber,latestTime);
-                latestTime = displayData.get(displayData.size()-1).getTime();
-
-                if (displayData.size() < paginationNumber)
-                    canFetch = false;*/
-
-                adapter.addMessage(displayData);
-                displayedsize = totalItemCount + 1;
-            } else {
-                displayData = allData.subList(start, start + paginationNumber);
-                /*displayData = db.getAllMessages(paginationNumber,latestTime);
-                latestTime = displayData.get(displayData.size()-1).getTime();
-
-                if (displayData.size() < paginationNumber)
-                    canFetch = false;*/
-
-                adapter.addMessage(displayData);
-                displayedsize = displayedsize + paginationNumber;
-            }
-        } else {
-            /*displayData = db.getAllMessages(paginationNumber,latestTime);
-            latestTime = displayData.get(displayData.size()-1).getTime();
-
-            if (displayData.size() < paginationNumber)
-                canFetch = false;*/
-
-            adapter.setChatMessages(allData);
-            displayedsize = displayedsize + totalItemCount;
         }
     }
     public ChatSocket getSocket() {
