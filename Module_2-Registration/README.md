@@ -12,29 +12,23 @@ To do this, we will be using the Hasura Data Service.
 
 ### Creating a new table
 
-Go to your project console and head to Data and Schema Management present in the left side panel.
+Go to your project console and head to **Data and Schema Management** present in the left side panel.
 
-Here, create a new table user_details.
+Here, create a new table `user_details`.
 
-Insert the following columns to the user_details table:
+Insert the following columns to the `user_details` table:
 
-1. name ( as Text)
+![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_2-Registration/add_new_table.png)
 
-2. status ( as Text)
-
-3. user_id ( as Int)
-
-4. file_id (as Text)
-
-user_id will be used to identify which user can access the above fields.
+`user_id` will be used to identify which user can access the above fields.
 
 ### Adding Permissions
 
 To limit who can access this data, we have to set some permissions.
 
-Head to Modify Table, Relationships and Permissions in the console and scroll to the bottom to find the permissions field
+Head to **Modify Table, Relationships and Permissions** in the console and scroll to the bottom to find the permissions field
 
-Under Permissions, click on ** Add Permissions for new Role ** to add a new permission as follows.
+Under Permissions, click on **Add Permissions for new Role** to add a new permission as follows.
 
 ![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_2-Registration/add_permissions_userdetails.png)
 
@@ -150,24 +144,10 @@ client.useDataService()
                     .enqueue(new Callback<List<UserDetails>, HasuraException>() {
                         @Override
                         public void onSuccess(List<UserDetails> userDetailsList) {
+                            UserDetails userDetails = userDetailsList.get(0);
+                            String fileId = userDetails.getFileId();
                             
-                            client.useFileStoreService()
-                                    .downloadFile("File-Id", new FileDownloadResponseListener() {
-                                        @Override
-                                        public void onDownloadComplete(byte[] bytes) {
-                                            
-                                        }
-
-                                        @Override
-                                        public void onDownloadFailed(HasuraException e) {
-                                            
-                                        }
-
-                                        @Override
-                                        public void onDownloading(float v) {
-
-                                        }
-                                    });
+                            //Now download from file store once you have the fileId of the file.
                         }
 
                         @Override
@@ -175,6 +155,27 @@ client.useDataService()
                         
                         }
                     });
+
+```
+##### Using FileStore for downloading data
+```
+client.useFileStoreService()
+           .downloadFile(fileId, new FileDownloadResponseListener() {
+                @Override
+                public void onDownloadComplete(byte[] bytes) {
+                                            
+                }
+
+                @Override
+                public void onDownloadFailed(HasuraException e) {
+                                            
+                }
+
+                @Override
+                public void onDownloading(float v) {
+
+                }
+           });
 
 ```
 #### Uploading Data
