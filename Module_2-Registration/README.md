@@ -4,7 +4,7 @@ This module portrays how to create a simple profile page.
 
 This includes creating a new table under Hasura Data Service and performing basic CRUD operations.
 
-Once the user is authenticated, we would like to store some additional information about the user. in this case, I would be storing his name, status, fileId of his profile picture and his mobile number.
+Once the user is authenticated, we would like to store some additional information about the user. in this case, I would be storing his name, status, fileId of his profile picture.
 
 To do this, we will be using the Hasura Data Service.
 
@@ -36,7 +36,7 @@ Head to Modify Table, Relationships and Permissions in the console and scroll to
 
 Under Permissions, click on ** Add Permissions for new Role ** to add a new permission as follows.
 
-//Add image here.
+![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_2-Registration/add_permissions_userdetails.png)
 
 
 ## 2: Configuring the Hasura Android SDK:
