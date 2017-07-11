@@ -11,7 +11,6 @@ public class UserDetails {
 
     @SerializedName("status")
     String status;
-    //byte[] picture;
 
     @SerializedName("user_id")
     int user_id;

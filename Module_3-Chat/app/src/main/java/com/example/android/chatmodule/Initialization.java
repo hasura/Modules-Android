@@ -19,6 +19,4 @@ public class Initialization extends Application{
                 .enableLogs()
                 .initialise(this);
     }
-
-
 }

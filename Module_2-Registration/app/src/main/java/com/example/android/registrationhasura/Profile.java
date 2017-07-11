@@ -1,21 +1,24 @@
 package com.example.android.registrationhasura;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.File;
 import java.util.List;
 
 import io.hasura.sdk.Callback;
@@ -23,7 +26,9 @@ import io.hasura.sdk.Hasura;
 import io.hasura.sdk.HasuraClient;
 import io.hasura.sdk.HasuraUser;
 import io.hasura.sdk.exception.HasuraException;
+import io.hasura.sdk.model.response.FileUploadResponse;
 import io.hasura.sdk.responseListener.FileDownloadResponseListener;
+import io.hasura.sdk.responseListener.FileUploadResponseListener;
 
 /**
  * Created by amogh on 1/6/17.
@@ -37,24 +42,49 @@ public class Profile extends AppCompatActivity {
     Button button;
     HasuraClient client;
     String fileId;
+    Context context;
 
     int update = 0;//used as a flag
 
     private static final int CAMERA_REQUEST = 100;
+
+    private static final int PERMISSIONS_REQUEST_CAMERA = 200;
+
+    @Override
+    public void onBackPressed(){
+        Intent i = new Intent(Profile.this,MainActivity.class);
+        startActivity(i);
+        finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_information_activity);
 
+        context = getApplicationContext();
 
         name = (EditText) findViewById(R.id.profile_name);
         status = (EditText) findViewById(R.id.profile_status);
         picture = (ImageView) findViewById(R.id.profile_picture);
         button = (Button) findViewById(R.id.profile_button);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.profile_toolbar);
-        toolbar.setTitle("Set Up Your Profile");
+        ActionBar toolbar = getSupportActionBar();
+        toolbar.setDisplayShowTitleEnabled(true);
+        toolbar.setTitle("Your ProfileActivity");
+
+        toolbar.setHomeButtonEnabled(true);
+        toolbar.setDisplayHomeAsUpEnabled(true);
 
         final HasuraUser user = Hasura.getClient().getUser();
 
@@ -78,7 +108,7 @@ public class Profile extends AppCompatActivity {
                             picture.getLayoutParams().height = (int) Profile.this.getResources().getDimension(R.dimen.image_set_height);
                             picture.getLayoutParams().width = (int) Profile.this.getResources().getDimension(R.dimen.image_set_width);
                             client.useFileStoreService()
-                                    .downloadFile("104_picture", new FileDownloadResponseListener() {
+                                    .downloadFile(userDetailsList.get(0).getFileId(), new FileDownloadResponseListener() {
                                         @Override
                                         public void onDownloadComplete(byte[] bytes) {
                                             picture.setImageBitmap(Photo.getImage(bytes));
@@ -105,15 +135,14 @@ public class Profile extends AppCompatActivity {
         picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent,CAMERA_REQUEST);
+                checkPermissions();
             }
         });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Bitmap bitmap = ((BitmapDrawable)picture.getDrawable()).getBitmap();
+                Bitmap bitmap = ((BitmapDrawable)picture.getDrawable()).getBitmap();
                 byte[] image = Photo.getBytes(bitmap);
                 final UserDetails userDetails = new UserDetails();
                 userDetails.setName(name.getText().toString().trim());
@@ -121,10 +150,41 @@ public class Profile extends AppCompatActivity {
                 userDetails.setId(Hasura.getClient().getUser().getId());
 
                 client.useFileStoreService()
-                        .uploadFile(user.getId() + "_picture", image, "image/*", new FileUploadResponseListener() {
+                        .uploadFile(image, "image/*", new FileUploadResponseListener() {
                                  @Override
                                  public void onUploadComplete(FileUploadResponse fileUploadResponse) {
                                      userDetails.setFileId(fileUploadResponse.getFile_id());
+                                     if (update == 0) {
+                                         client.useDataService()
+                                                 .setRequestBody(new InsertQuery(userDetails))
+                                                 .expectResponseType(ResponseMessage.class)
+                                                 .enqueue(new Callback<ResponseMessage, HasuraException>() {
+                                                     @Override
+                                                     public void onSuccess(ResponseMessage responseMessage) {
+                                                         Toast.makeText(Profile.this, "ProfileActivity updated successfully", Toast.LENGTH_SHORT).show();
+                                                     }
+
+                                                     @Override
+                                                     public void onFailure(HasuraException e) {
+                                                         Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                                     }
+                                                 });
+                                     } else {
+                                         client.useDataService()
+                                                 .setRequestBody(new UpdateQuery(userDetails))
+                                                 .expectResponseType(ResponseMessage.class)
+                                                 .enqueue(new Callback<ResponseMessage, HasuraException>() {
+                                                     @Override
+                                                     public void onSuccess(ResponseMessage responseMessage) {
+                                                         Toast.makeText(Profile.this, "ProfileActivity updated successfully", Toast.LENGTH_SHORT).show();
+                                                     }
+
+                                                     @Override
+                                                     public void onFailure(HasuraException e) {
+                                                         Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                                     }
+                                                 });
+                                     }
                                  }
 
                                  @Override
@@ -133,79 +193,21 @@ public class Profile extends AppCompatActivity {
                                  }
                         });
 
-
-                if(update == 0) {
-                    client.useDataService()
-                            .setRequestBody(new InsertQuery(userDetails))
-                            .expectResponseType(ResponseMessage.class)
-                            .enqueue(new Callback<ResponseMessage, HasuraException>() {
-                                @Override
-                                public void onSuccess(ResponseMessage responseMessage) {
-                                    Toast.makeText(Profile.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
-                                }
-
-                                @Override
-                                public void onFailure(HasuraException e) {
-                                    Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                } else {
-                    client.useDataService()
-                            .setRequestBody(new UpdateQuery(userDetails))
-                            .expectResponseType(ResponseMessage.class)
-                            .enqueue(new Callback<ResponseMessage, HasuraException>() {
-                                @Override
-                                public void onSuccess(ResponseMessage responseMessage) {
-                                    Toast.makeText(Profile.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
-                                }
-
-                                @Override
-                                public void onFailure(HasuraException e) {
-                                    Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                }*/
-
-                File dir = Environment.getExternalStorageDirectory();
-                File[] files = dir.listFiles();
-
-                Log.i("File",dir.toString());
-
-                //Log.i("File", files.length + "");
-                /*for (File file: files) {
-                    Log.i("File", "Filename: " + file.getName());
-                }*/
-
-
-                //File yourFile = new File("/storage/emulated/0/DCIM/Camera/IMG_20170403_125715.jpg");
-                File yourFile = new File("/document/3332-6230:DCIM/DCIM/Screenshots");
-
-                File[] fileft = yourFile.listFiles();
-                Log.i("File",yourFile.toString());
-
-                Log.i("File", fileft.length + "");
-                for (File file: fileft) {
-                    Log.i("File", "Filename: " + file.getName());
-                }
-
-
-                /*client.useFileStoreService()
-                        .uploadFile("SDcard_picture", yourFile, "image/*", new FileUploadResponseListener() {
-                            @Override
-                            public void onUploadComplete(FileUploadResponse fileUploadResponse) {
-                                Toast.makeText(Profile.this, "Successful", Toast.LENGTH_SHORT).show();
-                            }
-
-                            @Override
-                            public void onUploadFailed(HasuraException e) {
-                                Toast.makeText(Profile.this, e.toString(), Toast.LENGTH_LONG).show();
-                            }
-                        });*/
             }
         });
 
 
-}
+    }
+
+    public void checkPermissions() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA}, PERMISSIONS_REQUEST_CAMERA);
+        } else {
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(intent,CAMERA_REQUEST);
+        }
+    }
+
     protected void onActivityResult(int requestcode, int resultcode, Intent data) {
         if(requestcode == CAMERA_REQUEST && resultcode == Activity.RESULT_OK){
             Bitmap photo = (Bitmap) data.getExtras().get("data");
