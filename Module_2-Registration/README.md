@@ -18,7 +18,7 @@ Here, create a new table `user_details`.
 
 Insert the following columns to the `user_details` table:
 
-![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_2-Registration/add_new_table.png)
+![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_2-Registration/add-new-table.png)
 
 `user_id` will be used to identify which user can access the above fields.
 
