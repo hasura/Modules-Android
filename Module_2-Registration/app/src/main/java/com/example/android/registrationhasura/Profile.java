@@ -107,6 +107,8 @@ public class Profile extends AppCompatActivity {
                             status.setText(userDetailsList.get(0).getStatus());
                             picture.getLayoutParams().height = (int) Profile.this.getResources().getDimension(R.dimen.image_set_height);
                             picture.getLayoutParams().width = (int) Profile.this.getResources().getDimension(R.dimen.image_set_width);
+
+                            // Download file from FileStore
                             client.useFileStoreService()
                                     .downloadFile(userDetailsList.get(0).getFileId(), new FileDownloadResponseListener() {
                                         @Override
@@ -149,6 +151,7 @@ public class Profile extends AppCompatActivity {
                 userDetails.setStatus(status.getText().toString().trim());
                 userDetails.setId(Hasura.getClient().getUser().getId());
 
+                //Upload file to FileStore
                 client.useFileStoreService()
                         .uploadFile(image, "image/*", new FileUploadResponseListener() {
                                  @Override
