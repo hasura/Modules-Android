@@ -36,7 +36,7 @@ Head to Modify Table, Relationships and Permissions in the console and scroll to
 
 Under Permissions, click on ** Add Permissions for new Role ** to add a new permission as follows.
 
-//Add image here.
+![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_2-Registration/add_permissions_userdetails.png)
 
 
 ## 2: Configuring the Hasura Android SDK:
