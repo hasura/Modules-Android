@@ -132,7 +132,14 @@ Clone the [Hasura Quick-Start](https://github.com/hasura/quickstart-docker-git) 
 Copy the node-express folder. This will be your base folder.
 
 Go to the folder app/src. Here you will find a package.json file, where you will have to add the dependencies for your node server.
-///Add all npm commands
+
+When you are in the app/src folder, open a terminal and run the following commands to populate the required dependencies in the package.json file
+```
+npm install --save express@4.15.2
+
+npm install --save socket.io
+
+```
 
 ### Step 3:
 
