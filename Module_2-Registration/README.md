@@ -79,7 +79,7 @@ This initialization should be before you start using the SDK(like beginning of y
 ```
 ## 4: SignUp and Login:
 
-Regarding the signUp/Login part, please refer to [Hasura Android Module 1-Login](https://github.com/hasura/Modules-Android/tree/master/Module%201-Login).
+Regarding the signUp/Login part, please refer to [Hasura Android Module 1-Login](https://github.com/hasura/Modules-Android/tree/master/Module_1-Login).
 
 You can implement any one of the methods in the above module for performing SignUp/Login.
 
