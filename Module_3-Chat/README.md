@@ -17,7 +17,7 @@ We will need to create two tables, one for storing user details and the other fo
 
 Create a new table `user_details` and insert the following columns:
 
-///Add image for user details table
+![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_3-Chat/add_new_table_chat_profile.png)
 
 Click on create.
 
@@ -25,7 +25,7 @@ Click on create.
 
 Create a new table `chat_meassage'and insert the following columns:
 
-//Add image for chat message table
+![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_3-Chat/add_new_table_chat_message.png)
 
 Click on create.
 
@@ -38,11 +38,18 @@ Head to **Modify Table, Relationships and Permissions** in the console and scrol
 #### UserDetails table:
 
 Under Permissions, click on **Add Permissions for new Role** to add a new permission as follows.
-///Add image for permissions
+
+![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_3-Chat/permissions_user_details.png)
+
+``Check : {"user_id":"REQ_USER_ID"}``
+
+The above statement says that allow access only if value of ``user_id`` equals ``REQ_USER_ID`` where "REQ_USER_ID" is a special varialbe used by the Hasura Data Service that holds the Hasura-User-Id of the currently logged in user.
+
 #### ChatMessage table:
 
 Under Permissions, click on **Add Permissions for new Role** to add a new permission as follows.
-//Add image for permissions
+
+![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_3-Chat/permissions_chat_message.png)
 
 ## 2: Configuring the Hasura Android SDK:
 
