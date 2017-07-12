@@ -262,7 +262,8 @@ We have to add the Hasura remote now. From the terminal go to the folder that yo
 Copy the link corresponding to `Add the Hasura remote` and enter it in the terminal.
 
 Now enter `git push hasura master` to deploy your CustomService.
-//Add image
+
+![Alt text](https://github.com/hasura/Modules-Android/blob/master/Module_3-Chat/socket_server_add_remote.png)
 
 ## 6. Using the Socket-Server
 
