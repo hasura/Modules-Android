@@ -106,7 +106,7 @@ You can implement any one of the methods in the above module for performing Sign
 
 ## 5: Storing Profile Information:
 
-Regarding storing user information, please refer to [Hasura Android Module 2-Registration](https://github.com/hasura/Modules-Android/tree/master/Module_1-Registration).
+Regarding storing user information, please refer to [Hasura Android Module 2-Registration](https://github.com/hasura/Modules-Android/tree/master/Module_2-Registration).
 
 In this case, we will also be storing the mobile number of the user in the user details table.
 
