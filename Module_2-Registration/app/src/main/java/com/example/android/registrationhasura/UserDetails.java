@@ -11,7 +11,6 @@ public class UserDetails {
 
     @SerializedName("status")
     String status;
-    //byte[] picture;
 
     @SerializedName("user_id")
     int user_id;
@@ -26,10 +25,6 @@ public class UserDetails {
     public void setStatus(String status){
         this.status = status;
     }
-
-/*    public void setPicture(byte[] picture){
-        this.picture = picture;
-    }*/
 
     public void setId(int id){
         this.user_id = id;
@@ -46,10 +41,6 @@ public class UserDetails {
     public String getStatus(){
         return status;
     }
-
-/*    public byte[] getPicture(){
-        return picture;
-    }*/
 
     public int getId(){
         return user_id;

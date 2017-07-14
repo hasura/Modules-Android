@@ -33,9 +33,9 @@ import io.hasura.sdk.exception.HasuraException;
  * Created by amogh on 29/5/17.
  */
 
-public class ContactsFragment extends Fragment {
+public class ConversationsFragment extends Fragment {
 
-    ContactsListAdapter adapter;
+    ConversationsListAdapter adapter;
     RecyclerView recyclerView;
     String latestTime;
     FloatingActionButton floatingActionButton;
@@ -48,7 +48,7 @@ public class ContactsFragment extends Fragment {
 
     ChatSocket chatSocket;
 
-    private static String TAG = "ContactsFragment";
+    private static String TAG = "ConversationsFragment";
 
     HasuraUser user = Hasura.getClient().getUser();
     HasuraClient client = Hasura.getClient();
@@ -138,7 +138,7 @@ public class ContactsFragment extends Fragment {
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
-        adapter = new ContactsListAdapter(new ContactsListAdapter.Interactor(){
+        adapter = new ConversationsListAdapter(new ConversationsListAdapter.Interactor(){
             @Override
             public void onChatClicked(int position, ChatMessage contact) {
 

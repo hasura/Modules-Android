@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpViewPager(ViewPager viewPager){
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new ContactsFragment(),"Chats");
+        adapter.addFragment(new ConversationsFragment(),"Chats");
         adapter.addFragment(new AllContactsFragment(),"Contacts");
         viewPager.setAdapter(adapter);
     }

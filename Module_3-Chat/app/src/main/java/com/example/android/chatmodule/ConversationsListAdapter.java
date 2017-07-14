@@ -21,7 +21,7 @@ import io.hasura.sdk.exception.HasuraException;
  * Created by amogh on 29/5/17.
  */
 
-public class ContactsListAdapter extends RecyclerView.Adapter<ContactsListViewHolder> {
+public class ConversationsListAdapter extends RecyclerView.Adapter<ConversationsListViewHolder> {
 
     List<ChatMessage> contacts = new ArrayList<>();
     int receiverId;
@@ -30,7 +30,7 @@ public class ContactsListAdapter extends RecyclerView.Adapter<ContactsListViewHo
     HasuraUser user = Hasura.getClient().getUser();
     HasuraClient client = Hasura.getClient();
 
-    public ContactsListAdapter(Interactor interactor) {
+    public ConversationsListAdapter(Interactor interactor) {
         this.interactor = interactor;
     }
 
@@ -42,13 +42,13 @@ public class ContactsListAdapter extends RecyclerView.Adapter<ContactsListViewHo
     Interactor interactor;
 
     @Override
-    public ContactsListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ConversationsListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_contact,parent,false);
-        return new ContactsListViewHolder(view);
+        return new ConversationsListViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ContactsListViewHolder holder, final int position) {
+    public void onBindViewHolder(final ConversationsListViewHolder holder, final int position) {
 
         final ChatMessage contact = contacts.get(position);
 
