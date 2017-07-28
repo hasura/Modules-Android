@@ -12,7 +12,7 @@ import io.hasura.sdk.ProjectConfig;
  * Created by amogh on 25/5/17.
  */
 
-public class Initialization extends Application {
+public class InitializationApplication extends Application {
 
     @Override
     public void onCreate() {

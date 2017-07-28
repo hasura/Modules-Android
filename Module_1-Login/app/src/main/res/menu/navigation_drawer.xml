@@ -2,32 +2,58 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Home"
-        android:id="@+id/nav_1" />
+        android:id="@+id/home" />
 
-    <item android:title="Register"
-        android:id="@+id/nav_2"/>
+    <item android:title="Login Methods">
 
-    <item android:title="Mobile-SignUp"
-        android:id="@+id/nav_3"/>
+        <menu>
+            <group android:checkableBehavior="single">
 
-    <item android:title="Email-SignUp"
-        android:id="@+id/nav_4"/>
+                <item
+                    android:id="@+id/username"
+                    android:title="Username + Password"
+                    android:icon="@drawable/ic_action_user"/>
 
-    <item android:title="Login"
-        android:id="@+id/nav_5"/>
+                <item
+                    android:id="@+id/email"
+                    android:title="Email + Password"
+                    android:icon="@drawable/ic_action_email"/>
 
-    <item android:title="OTP-Login"
-        android:id="@+id/nav_6"/>
+                <item
+                    android:id="@+id/mobile"
+                    android:title="Mobile + Otp"
+                    android:icon="@drawable/ic_action_otp"/>
 
-    <item android:title="Facebook-Login"
-        android:id="@+id/nav_7"/>
+            </group>
+        </menu>
 
-    <item android:title="Google-Login"
-        android:id="@+id/nav_8"/>
+    </item>
 
-    <item android:title="LinkedIn-Login"
-        android:id="@+id/nav_9"/>
+    <item android:title="Social Login">
 
-    <item android:title="Github-Login"
-        android:id="@+id/nav_10"/>
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:icon="@drawable/ic_action_facebook"
+                    android:title="Facebook"
+                    android:id="@+id/facebook"/>
+
+                <item
+                    android:icon="@drawable/ic_action_gplus"
+                    android:title="Google"
+                    android:id="@+id/google"/>
+
+                <item
+                    android:icon="@drawable/ic_action_linkedin"
+                    android:title="LinkedIn"
+                    android:id="@+id/linkedin"/>
+
+                <item
+                    android:icon="@drawable/ic_action_github"
+                    android:title="Github"
+                    android:id="@+id/github"/>
+            </group>
+        </menu>
+    </item>
 </menu>

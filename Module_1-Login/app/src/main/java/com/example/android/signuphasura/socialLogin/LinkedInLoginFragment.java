@@ -1,4 +1,4 @@
-package com.example.android.signuphasura;
+package com.example.android.signuphasura.socialLogin;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -19,6 +19,9 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.example.android.signuphasura.R;
+import com.example.android.signuphasura.SampleActivity;
+import com.example.android.signuphasura.model.SocialLoginResponse;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
@@ -29,18 +32,23 @@ import io.hasura.sdk.HasuraUser;
  * Created by amogh on 15/6/17.
  */
 
-public class GithubLogin extends Fragment{
+public class LinkedInLoginFragment extends Fragment{
 
-    private static final String API_KEY = "1242980c34bc60f92f28";
+    public static final String TITLE = "LinkedIn Login";
+    public static final String TAG = TITLE;
+
+    private static final String API_KEY = "8117x242llbwmy";
     private static final String STATE = "DgkRrHXmyu3KLd0KDdfq";
-    private static final String REDIRECT_URI = "https://auth.hello70.hasura-app.io/github/authenticate";
+    private static final String REDIRECT_URI = "https://auth.hello70.hasura-app.io/linkedin/authenticate";
 
-    private static final String AUTHORIZATION_URL = "https://github.com/login/oauth/authorize";
+    private static final String AUTHORIZATION_URL = "https://www.linkedin.com/oauth/v2/authorization";
+    private static final String RESPONSE_TYPE_PARAM = "response_type";
+    private static final String RESPONSE_TYPE_VALUE = "code";
     private static final String CLIENT_ID_PARAM = "client_id";
     private static final String STATE_PARAM = "state";
     private static final String REDIRECT_URI_PARAM = "redirect_uri";
     private static final String SCOPE_PARAM = "scope";
-    private static final String SCOPE_VALUE = "user:email";
+    private static final String SCOPE_VALUE = "r_emailaddress%20r_basicprofile";
 
     private static final String QUESTION_MARK = "?";
     private static final String AMPERSAND = "&";
@@ -53,12 +61,12 @@ public class GithubLogin extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        return inflater.inflate(R.layout.github_login,container,false);
+        return inflater.inflate(R.layout.linkedin_login,container,false);
     }
 
     @Override
     public void onViewCreated(View view,Bundle savedInstanceState){
-        webView = (WebView) view.findViewById(R.id.webview_github);
+        webView = (WebView) view.findViewById(R.id.webview_linkedin);
         webView.clearCache(true);
         webView.clearHistory();
         clearCookies(getContext());
@@ -90,32 +98,6 @@ public class GithubLogin extends Fragment{
                 view.loadUrl("javascript:console.log(document.body.getElementsByTagName('pre')[0].innerHTML);");
             }
 
-            /*@Override
-            public boolean shouldOverrideUrlLoading(WebView view,String authorizationUrl){
-                Log.i("LinkedInWebView","Loading Url" + authorizationUrl);
-                if(authorizationUrl.startsWith(REDIRECT_URI)){
-                    Uri uri = Uri.parse(authorizationUrl);
-                    String stateToken = uri.getQueryParameter(STATE_PARAM);
-                    if(stateToken == null || !stateToken.equals(STATE)){
-                        Log.e("Authorize","State token does not match");
-                        clearCookies(getContext());
-                        //listener.onLinkedInLoginFailure();
-                        return true;
-                    }
-                    String authorizationToken = uri.getQueryParameter(RESPONSE_TYPE_VALUE);
-                    if(authorizationToken == null){
-                        Log.i("Authorize","User does not all access");
-                        clearCookies(getContext());
-                        //listener.onLinkedInLoginFailure();
-                        return true;
-                    }
-                }
-                else {
-                    Log.i("Authorize","Redirecting to: " + authorizationUrl);
-                    webView.loadUrl(authorizationUrl);
-                }
-                return false;
-            }*/
         });
 
         String authUrl = getAuthorizationUrl();
@@ -128,6 +110,7 @@ public class GithubLogin extends Fragment{
 
     private void handleLinkedInLoginResponse(final SocialLoginResponse loginResponse){
         webView.setVisibility(View.INVISIBLE);
+
         if(loginResponse.getAccessToken() != null) {
             Intent i = new Intent(getActivity().getApplicationContext(),SampleActivity.class);
             startActivity(i);
@@ -136,16 +119,18 @@ public class GithubLogin extends Fragment{
     }
 
     private static String getAuthorizationUrl() {
-        return AUTHORIZATION_URL + QUESTION_MARK + SCOPE_PARAM + EQUALS + SCOPE_VALUE
-                + AMPERSAND + REDIRECT_URI_PARAM + EQUALS + REDIRECT_URI
+        return AUTHORIZATION_URL
+                + QUESTION_MARK + RESPONSE_TYPE_PARAM + EQUALS + RESPONSE_TYPE_VALUE
                 + AMPERSAND + CLIENT_ID_PARAM + EQUALS + API_KEY
-                + AMPERSAND + STATE_PARAM + EQUALS + STATE;
-
+                + AMPERSAND + STATE_PARAM + EQUALS + STATE
+                + AMPERSAND + SCOPE_PARAM + EQUALS + SCOPE_VALUE
+                + AMPERSAND + REDIRECT_URI_PARAM + EQUALS + REDIRECT_URI;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+
     }
 
     @Override

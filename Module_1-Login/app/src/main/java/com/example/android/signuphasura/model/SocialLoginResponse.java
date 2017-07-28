@@ -1,4 +1,4 @@
-package com.example.android.signuphasura;
+package com.example.android.signuphasura.model;
 
 import com.google.gson.annotations.SerializedName;
 

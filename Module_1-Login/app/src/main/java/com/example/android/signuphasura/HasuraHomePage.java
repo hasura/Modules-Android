@@ -14,6 +14,9 @@ public class HasuraHomePage extends Fragment {
 
     View parentViewHolder;
 
+    public static final String TITLE = "Home";
+    public static final String TAG = TITLE;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +25,6 @@ public class HasuraHomePage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         parentViewHolder = inflater.inflate(R.layout.hasura_home_page, container, false);
-
         return parentViewHolder;
     }
 }

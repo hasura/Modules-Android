@@ -1,4 +1,4 @@
-package com.example.android.signuphasura;
+package com.example.android.signuphasura.socialLogin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.android.signuphasura.R;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -26,7 +27,10 @@ import static io.hasura.sdk.HasuraSocialLoginType.FACEBOOK;
  * Created by amogh on 12/6/17.
  */
 
-public class FacebookLogin extends Fragment {
+public class FacebookLoginFragment extends Fragment {
+
+    public static final String TITLE = "Facebook Login";
+    public static final String TAG = TITLE;
 
     LoginButton loginButton;
     CallbackManager callbackmanager;

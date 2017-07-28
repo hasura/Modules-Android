@@ -1,14 +1,16 @@
-package com.example.android.signuphasura;
+package com.example.android.signuphasura.socialLogin;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.android.signuphasura.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
@@ -27,7 +29,10 @@ import static io.hasura.sdk.HasuraSocialLoginType.GOOGLE;
  * Created by amogh on 12/6/17.
  */
 
-public class GoogleLogin extends Fragment implements GoogleApiClient.OnConnectionFailedListener {
+public class GoogleLoginFragment extends Fragment implements GoogleApiClient.OnConnectionFailedListener {
+
+    public static final String TITLE = "Google Login";
+    public static final String TAG = TITLE;
 
     SignInButton signInButton;
     GoogleApiClient googleApiClient;
@@ -93,7 +98,6 @@ public class GoogleLogin extends Fragment implements GoogleApiClient.OnConnectio
                 @Override
                 public void onSuccess(String s) {
                     Toast.makeText(getActivity().getApplicationContext(), s, Toast.LENGTH_SHORT).show();
-
                 }
 
                 @Override
@@ -103,7 +107,10 @@ public class GoogleLogin extends Fragment implements GoogleApiClient.OnConnectio
 
             });
         }else{
-            Toast.makeText(getActivity(), "Google Failure", Toast.LENGTH_SHORT).show();
+
+            Log.i(TAG, "SignIn failed: " + result.getStatus().toString());
+
+            Toast.makeText(getActivity(), result.toString(), Toast.LENGTH_SHORT).show();
         }
     }
 
