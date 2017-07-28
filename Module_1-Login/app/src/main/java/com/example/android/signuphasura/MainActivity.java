@@ -116,16 +116,16 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(FacebookLoginFragment.TITLE, new FacebookLoginFragment(), FacebookLoginFragment.TAG, R.id.facebook);
                     return true;
                 case R.id.google:
-                    loadFragment(GoogleLoginFragment.TITLE, new GoogleLoginFragment(), GoogleLoginFragment.TAG, 5);
+                    loadFragment(GoogleLoginFragment.TITLE, new GoogleLoginFragment(), GoogleLoginFragment.TAG, R.id.google);
                     return true;
                 case R.id.linkedin:
-                    loadFragment(LinkedInLoginFragment.TITLE, new LinkedInLoginFragment(), LinkedInLoginFragment.TAG, 6);
+                    loadFragment(LinkedInLoginFragment.TITLE, new LinkedInLoginFragment(), LinkedInLoginFragment.TAG, R.id.linkedin);
                     return true;
                 case R.id.github:
-                    loadFragment(GithubLoginFragment.TITLE, new GithubLoginFragment(), GithubLoginFragment.TAG, 7);
+                    loadFragment(GithubLoginFragment.TITLE, new GithubLoginFragment(), GithubLoginFragment.TAG, R.id.github);
                     return true;
                 default:
-                    loadFragment(HasuraHomePage.TITLE, new HasuraHomePage(), HasuraHomePage.TAG, 0);
+                    loadFragment(HasuraHomePage.TITLE, new HasuraHomePage(), HasuraHomePage.TAG, R.id.home);
                     return true;
             }
         }
